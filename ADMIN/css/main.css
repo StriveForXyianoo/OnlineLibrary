@@ -1,0 +1,1582 @@
+
+
+.maintitle h1{
+text-align: center;
+justify-content: center;
+}
+
+
+
+h1 {
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+
+  }
+  .left-side-box {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ff7700; /* Signature color */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-side-box button {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color: #fff; /* White text color */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.left-side-box button:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Add right border to separate buttons */
+}
+
+.left-side-box button:hover {
+    color: #e05b00; /* Slightly darker text color on hover */
+    background-color: rgba(255, 119, 0, 0.1); /* Adjusted background color on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+
+
+
+
+  .background-main{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 300px;
+  }
+
+  .mainlogo{
+    width: 450px;
+    height:300px;
+    opacity: 25%;
+  }
+
+
+        .form-container-records {
+            position: absolute;
+            width: 1100px;
+            max-width: 1100px;
+            height: 550px;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0); /* Transparent background */
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        
+        .form-container-books {
+            position: fixed;
+            width: 98%;
+            height: 450px;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+            padding: 20px;
+        
+           
+            z-index: 1;
+        }
+
+        .form-container-users {
+            width: 98%;
+            height: 600px;
+            position: absolute;
+            top: 400px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .form-container-users h2 {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .upload-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF; /* Change the color to your preference */
+            color: #fff; /* Text color */
+            font-size: 16px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            position: absolute;
+            display: flex;
+
+        }
+  
+        /* Style for button hover effect */
+        .upload-button:hover {
+            background-color: #ff7700; /* Change the color to your preference */
+        }
+
+
+
+        .form-container h2{
+            text-align: center;
+            justify-content: center ;
+            margin-top: 5px;
+            font-size: 17px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+       .close-btn{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 70px;
+        height: 20px;
+        }
+
+        .table-container {
+            max-height: 450px;
+            width: 500px;
+            overflow-y:auto;
+            overflow-x: auto;
+            position: absolute;
+            right: 10px;
+        }
+        table {
+            width: 100%;
+            max-height: 450px;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+    
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+    
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+    
+        th {
+            background-color: #3a3a3a;
+            height: 20px;
+            color: #ffffff;
+        }
+
+        /* CSS for resizing images */
+        table img {
+            max-width: 150px; 
+            height: auto;
+        }
+  
+
+        .submit-button {
+            position: absolute;
+            bottom: 10px;
+            left: 230px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            
+        }
+        
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        
+        .submit-button:active {
+            transform: scale(0.95);
+            /* Add a slight scale effect when the button is pressed */
+        }
+        
+
+
+        .upload-text h2{
+            position: absolute;
+            left: 150px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+            top: 100px;
+        }
+
+        
+        .upload-btn{
+            position: absolute;
+            left: 180px;
+            top: 150px;
+        }
+
+        .box {
+            position: absolute;
+            width: 500px;
+            height: 350px;
+            background-color: lightblue;
+            border: 1px solid #000;
+            border-radius: 12px;
+            top: 180px;
+            left: 30px;
+            background-size: cover;
+            background-position: center;
+          }
+
+          .scrollable-table {
+            height: 550px; /* Set the fixed height to 500px */
+            overflow-y: auto;
+            border: 1px solid #ccc;
+        }
+    
+        .scrollable-table table {
+            width: 100%;
+        }
+    
+        .scrollable-table th,
+        .scrollable-table td {
+            padding: 8px;
+            text-align: center;
+            justify-content: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+    
+        .scrollable-table th {
+            background-color: #ff7700;
+            font-size: 17px;
+            font-family: 'Open Sans', sans-serif;
+            height: 20px;
+        }
+    
+        .full-screen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .full-screen-image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .lb-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+
+        .table-container {
+            position: absolute;
+            width: 1050px;
+            height: 460px;
+            overflow-y: scroll;
+            top: 45px;
+          
+        }
+
+        .table-container-images {
+            position: absolute;
+            width: 650px;
+            height: 450px;
+            overflow-y: scroll;
+            top: 100px;
+            right: 20px;
+            background-color: #ffffff;
+        }
+        
+    .table-container-images tr th{
+        background-color:  #333;
+        color: #ffffff;
+    }
+        
+        input[type='submit'][name='delete_image'] {
+            background-color: #e74c3c; /* Red background color */
+            color: #fff; /* White text color */
+            padding: 10px 20px; /* Adjust padding for better appearance */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+        }
+        
+        input[type='submit'][name='delete_image']:hover {
+            background-color: #c0392b; /* Darker red on hover */
+            color: #fff; /* White text color on hover */
+            transform: scale(1.05); /* Add a slight scale effect on hover */
+        }
+        
+        input[type='submit'][name='delete_image']:active {
+            transform: scale(0.95); /* Add a slight scale effect when the button is pressed */
+        }
+        
+        
+        .table-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 10px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 1px;
+            cursor: default;
+            height: 10px;
+        }
+        
+        .users-table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        
+        .users-table tr:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .table-container-scroll {
+            width: 100%;
+            height: 450px;
+            overflow-y: auto;
+            position: absolute;
+            top: 50px;
+        }
+        
+        .users-table {
+            width: 100%;
+            border-collapse: collapse;
+            height: 450px;
+        }
+
+        
+        
+        
+        .users-table td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            cursor: default;
+        }
+        
+        .button-container {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+
+        .delete-btn{
+            margin-top: 2px;
+        }
+        
+        .update-btn{
+            margin-bottom: 5px;
+        }
+
+
+.back-btn{
+    position: absolute;
+    right: 70px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    top: 20px;
+    cursor: pointer;
+
+}
+
+.back-btn a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bolder;
+}
+
+.back-btn a:hover{
+color: #eee;
+}
+
+/*********************************/
+.form-container-approval {
+left: 50%;
+transform: translate(-50%, -50%);
+position: absolute;
+width: 98%;
+height: 500px;
+overflow-y: scroll;
+top: 380px;
+
+padding: 5px;
+
+}
+
+
+.form-container-approval h2{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    }
+    
+.custom-table-register{
+    width: 98%;
+    border-collapse: collapse;
+    position: absolute;
+    margin-top: -10px;
+}
+.custom-table-register table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.custom-table-register table, th, td {
+    border: 1px solid black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.custom-table-register table, td {
+    border: 1px solid black;
+    height: 70px;
+    max-height: 70px;
+}
+.custom-table-register th, .custom-table-register td {
+    padding: 5px;
+    text-align: center;
+}
+
+.custom-table-register tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.custom-table-register td {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+.custom-table-register th {
+    background-color:  #333;/* Change this color code to your desired background color */
+    color: #fff; /* Change text color if needed */
+}
+
+/************************************/
+.custom-table {
+    max-height: 450px;
+    width: 98%;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: absolute;
+    right: 10px;
+}
+.custom-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.custom-table table, th, td {
+    border: 1px solid black;
+}
+.custom-table th, .custom-table td {
+    padding: 5px;
+    text-align: center;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.custom-table td {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+
+
+.custom-table .title-row {
+    background-color: #3399FF; /* Change the background color to your desired color */
+    color: white; /* Change the text color */
+}
+.custom-table tr:nth-child(even) {
+    background-color: #777777;
+}
+
+.custom-table th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+/* Style the "Approve" button */
+.custom-table .approve-button {
+    background-color: #4CAF50; /* Green color for the button */
+    color: white;
+    border: none;
+    padding: 5px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+/* Darken the color on hover */
+.custom-table .approve-button:hover {
+    background-color: #45a049; /* Slightly darker green color on hover */
+}
+.custom-table .deny-button {
+    background-color: #FF5733; /* Red color for the button */
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12x;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Darken the color on hover */
+.custom-table .deny-button:hover {
+    background-color: #FF4733; /* Slightly darker red color on hover */
+}
+
+/* Style for the form container */
+.deny-form {
+    background-color: #f2f2f2;
+}
+
+.custom-form-container {
+    max-height: 350px;
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px #888888;
+    padding: 20px;
+}
+
+/* Style for the "Close" button */
+.custom-form-container button {
+    background-color: #f44336; /* Red color for the button */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+/* Darken the color on hover for the "Close" button */
+.custom-form-container button:hover {
+    background-color: #d32f2f; /* Slightly darker red color on hover */
+}
+/* Style for the form container */
+.deny-form {
+    background-color: #f2f2f2;
+}
+
+.custom-form-container {
+    max-height: 300px;
+    height: 300px;
+    width: 300px;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px #888888;
+    padding: 20px;
+    display: none; 
+    border-radius: 8px;
+}
+
+.custom-form-container-denial {
+    max-height: 300px;
+    height: 300px;
+    width: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.4); /* Adjust the alpha value (0.9) for transparency */
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px #888888;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.custom-form-container-denial h3{
+    text-align: center;
+}
+.custom-form-container-denial {
+    position: absolute;
+}
+
+.custom-form-container-denial label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.close-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-button:hover {
+    background-color: #d32f2f;
+}
+
+.custom-form-container h3{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -5px;
+
+}
+
+.custom-form-container p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    text-align: justify;
+}
+
+
+
+.message-input {
+    width: 340px;
+    height: 100px;
+    resize: none;
+    margin-right: 10px;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust the alpha value (0.9) for transparency */
+}
+
+
+.send-link {
+    text-decoration: none;
+    font-size: 12px; /* Set the initial font size */
+    transition: font-size 0.3s; /* Add transition for smooth hover effect */
+}
+
+.send-link:hover {
+    color: #ff7700;
+    font-size: 14px; /* Increase the font size on hover */
+}
+
+.form-container-books h2{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -10px;
+}
+
+.custom-send-button {
+    background-color: #FF5733;
+    color: white;
+    /* Add any other button styles as needed for the Send button */
+}
+
+.red-text {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Slight black overlay */
+    z-index: 1;
+}
+
+
+.info-container {
+    
+    padding: 10px;
+    margin: 20px;
+    width: 400px;
+    position: absolute;
+    left: 10px;
+    top: 120px;
+}
+.info-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+.info-container p {
+    margin: 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+/*********************************/
+.custom-table-status {
+    max-height: 400px;
+    width: 1000px;
+    position: absolute;
+    right: 20px;
+}
+
+.form-container-situation {
+    width: 98%;
+    height: 600px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}        
+.form-container-situation h2{
+     text-align: center;
+     font-family: 'Open Sans', sans-serif;
+}
+
+        
+.user-scroll {
+    border-collapse: collapse;
+    width: 99%;
+    max-height: 500px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.user table {
+    max-height: 450px;
+    width: 99%;
+    overflow-y:auto;
+    overflow-x: auto;
+    position: absolute;
+    right: 10px;
+    top: 120px;
+}
+.user table, th, td {
+    border: 1px solid black;
+}
+.user th, .user td {
+    padding: 5px;
+    text-align: center;
+}
+
+.user tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.user td {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+.user th {
+    background-color:  #333;
+    color: #fff; 
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.course-cell {
+    width: 100px; /* Set the width for the Course column */
+}
+
+.section-cell {
+    width: 130px; /* Set the width for the Section column */
+}
+
+.idnum-cell {
+    width: 40px; 
+}
+
+.date-cell {
+    width: 80px; 
+}
+
+.bk-title-cell {
+    width: 90px; 
+}
+/************************************/
+
+
+.confirmation-input {
+    width: 50px; /* Adjust the width as needed */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for the "Confirm" button */
+.confirm-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 9px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 3px;
+}
+
+/* Hover effect for the button */
+.confirm-button:hover {
+    background-color: #45a049;
+}
+.code-incorrect {
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+.message{
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.code-matched {
+    color: blue;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+.return-button {
+    background-color: #0074CC; 
+    color: white; 
+    padding: 6px 10px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 9px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.return-button:hover {
+    background-color: #0052A9; 
+}
+
+
+
+.status-unclaimed {
+    color: orange;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .status-on-hand {
+    color: green;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .status-unreturned {
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+
+    font-size: 8px;
+  }
+
+  .status-late-return {
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .status-returned {
+    color: blue;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  .form-container-records h2 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -10px;
+  }
+
+  .selector{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+
+
+.search-form-container {
+    text-align: center; 
+    margin-bottom: 5px; 
+  }
+  
+  .search-form-container {
+    position: absolute;
+    left: 10%;
+    top: 20px;
+  }
+  .search-input {
+    width: 250px; 
+    padding: 5px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px; 
+  }
+  
+
+  .search-button {
+    background-color: #007BFF; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 13px; 
+    cursor: pointer; 
+  }
+  
+ 
+  .search-button:hover {
+    background-color: #0056b3; 
+  }
+  .close {
+    cursor: pointer;
+    color: red;
+    margin: 10px;
+    font-size:16px;
+    font-weight: 900;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+    color: darkred;
+    transform: scale(1.5);
+    
+}
+
+        .modal-log {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(88, 88, 88);
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            width: 550px;
+            max-width: 100%;
+            height: 580px;
+            max-height: 100%;
+            border-radius: 8px;
+        }
+
+        .modal-log img {
+            width: 550px;
+            height: 470px;
+            object-position: center;    
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        .logout-container {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            left: 220px;
+            top: 10px;
+        }
+    
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+
+
+        /* styles.css */
+.scrollable-table-log {
+    border-collapse: collapse;
+    width: 99%;
+    max-height: 500px;
+    overflow-y: auto;
+    text-align: center;
+  
+}
+
+.scrollable-table-log th, .scrollable-table-log td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+
+}
+
+.scrollable-table-log th {
+    background-color:  #333;
+    color: #ffffff;
+}
+
+.book-log{
+    max-height: 450px;
+    width: 99%;
+    overflow-y:auto;
+    overflow-x: auto;
+    position: absolute;
+    right: 10px;
+    top: 120px;
+}
+.scrollable-table-log td {
+    background-color: #f2f2f2;
+}
+
+.book-log h2{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*****************************************/
+
+.scrollable-table-situation {
+    border-collapse: collapse;
+    width: 99%;
+    max-height: 450px;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.scrollable-table-log th, .scrollable-table-log td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+
+}
+
+.scrollable-table-situation tr th {
+    background-color:  #333;
+    color: #ffffff;
+}
+
+.book-log-situation{
+    max-height: 450px;
+    width: 99%;
+    overflow-y:auto;
+    overflow-x: auto;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+
+}
+
+.scrollable-table-situation tr td{
+    background-color: #f2f2f2;
+}
+
+.styled-image {
+    width: 100px;
+    height: 100px;
+   
+}  
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure the modal appears above other elements */
+}
+
+.custom-modal-content {
+    max-width: 600px;
+    max-height: 650px;
+    width: 100%;
+    height: 100%;
+}
+
+.library-user-log-form {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 440px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+}
+
+.library-user-log-form h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: -10px;
+    cursor: default;
+}
+
+.library-user-log-form h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #4CAF50;
+    margin: 10px auto;
+    margin-top: 1px;
+}
+
+
+.library-user-log-form label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    flex: 0 0 auto; /* Make the label a fixed size */
+    margin-right: 10px; /* Add some spacing between label and input */
+}
+
+
+.library-user-log-form .search-input-group {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: -15px;
+}
+
+
+/* Style the search input */
+.library-user-log-form #search {
+    flex: 1;
+   width: 500px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.library-user-log-form button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.library-user-log-form button:hover {
+    background-color: #45a049;
+}
+
+
+
+.library-user-log-form span {
+    margin-left: 8px;
+}
+
+.search-results-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/*****************************/
+
+
+.user-details-container {
+    text-align: center;
+}
+
+.user-details-table {
+    margin-top: 20px;
+    
+}
+
+.user-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.user-details th{
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    
+}
+
+.user-details td {
+    padding: 5px; 
+    text-align:center;
+    border: 1px solid #ddd;
+    height: 30px; 
+}
+.user-details th {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.user-details tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.full-name, .id-number, .email, .course {
+    font-style: italic;
+   
+}
+
+.no-results {
+    color: red;
+    margin-top: 10px;
+}
+
+.log-book-button {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: #ff7700;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 10px;
+}
+
+.log-book-button:hover {
+    background-color: #cc6600;
+}
+
+
+/*****************************/
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 998; 
+}
+#logBookContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 450px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    top: 220px;
+    border-radius: 10px;
+}
+
+/* Style for closeLogBook button */
+#closeLogBook {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease; 
+}
+
+#closeLogBook:hover {
+    color: #ff0000; 
+}
+
+
+#logBookForm {
+
+    margin-top: 20px;
+}
+
+#logBookForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-heading {
+    text-align: center;
+    color: #333;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-date-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.submit-button-log {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect for the submit button */
+.submit-button-log:hover {
+    background-color: #45a049;
+}
+
+#logBookContainer.show,
+#overlay.show {
+    display: block;
+}
+
+#logBookContainer,
+#overlay {
+    display: none;
+}
+
+/******************/
+
+.book-log{
+    z-index: 9;
+}
+.container-search {
+    text-align: center;
+    max-width: 500px; 
+    margin: 50px auto; 
+    position: relative;
+    top: -50px;
+    
+}
+
+.custom-search-form {
+    background-color: #b8b8b8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-search-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.custom-search-form input {
+    padding: 12px; /* Increased padding */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Increased margin */
+    border: 1px solid #ddd; /* Added border */
+    border-radius: 4px;
+}
+
+.custom-search-form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 15px; /* Increased padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.custom-search-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Add these styles to your CSS file */
+.custom-search-user {
+    margin: 20px;
+}
+
+.custom-animated-table {
+    width: 100%;
+    max-width: 90%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    animation: fadeIn 1s ease-in-out; /* Apply animation to the table */
+}
+
+.custom-table-header {
+    background-color: #f2f2f2;
+    padding: 12px; /* Increased padding for header cells */
+    text-align: left;
+    font-weight: bold;
+}
+
+.custom-table-data {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.custom-animated-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Add animation styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.modal-rf {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(99, 99, 99);
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 500px;
+    max-width: 100%;
+    height: 550px;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.modal-rf img {
+    width: 500px;
+    height: 500px;
+    object-position: center;    
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.close {
+    cursor: pointer;
+    color: red;
+    margin: 10px;
+    font-size:16px;
+    font-weight: 900;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+    color: darkred;
+    transform: scale(1.5);
+    
+}

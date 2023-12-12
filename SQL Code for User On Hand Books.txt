@@ -1,0 +1,16 @@
+DELIMITER //
+
+CREATE EVENT IF NOT EXISTS UsersBookCustody
+ON SCHEDULE EVERY 5 SECOND
+DO
+BEGIN
+    UPDATE users_db
+    SET users_onhand = (
+        SELECT COUNT(*)
+        FROM book_status
+        WHERE book_status.idnum = users_db.idnum
+          AND (book_status.status = 'On-Hand' OR book_status.status = 'Late-Return')
+    );
+END //
+
+DELIMITER ;

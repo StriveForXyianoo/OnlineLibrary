@@ -1,0 +1,20 @@
+
+
+UPDATE book_status
+SET penalty_count = DATEDIFF(CURDATE(), date_return) * 5
+WHERE date_return < CURDATE();
+
+
+DROP EVENT IF EXISTS CheckOverdueBooks;
+
+SHOW TRIGGERS;
+
+SELECT CURDATE();
+
+SHOW EVENTS;
+
+
+SET GLOBAL event_scheduler = ON;
+
+
+SHOW VARIABLES LIKE 'event_scheduler';

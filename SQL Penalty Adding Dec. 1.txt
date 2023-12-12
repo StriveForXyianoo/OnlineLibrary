@@ -1,0 +1,12 @@
+DELIMITER //
+
+CREATE EVENT IF NOT EXISTS PenaltyChecker
+ON SCHEDULE EVERY 1 DAY
+DO
+BEGIN
+    UPDATE book_status
+    SET penalty_count = penalty_count + 5
+    WHERE status = 'Late-Return';
+END //
+
+DELIMITER ;

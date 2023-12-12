@@ -1,0 +1,47 @@
+---------------------borrow date code-----------------
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the current date without the time component
+    var currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
+
+    // Get the current year
+    var currentYear = currentDate.getFullYear();
+
+    // Initialize Flatpickr with options
+    flatpickr("#borrow_date", {
+        disable: [
+            function(date) {
+                // Disable Sundays
+                return date.getDay() === 0;
+            }
+        ],
+        dateFormat: "Y-m-d",
+        minDate: currentDate, // Set the minimum selectable date to the current date without the time component
+        maxDate: currentYear + "-12-31", // Set the maximum selectable date to the last day of the current year
+        // Add any additional options you need
+    });
+});
+
+--------------------------Return Date Code-----------------
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the current date without the time component
+    var currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
+
+    // Get the current year
+    var currentYear = currentDate.getFullYear();
+
+    // Initialize Flatpickr with options
+    flatpickr("#return_date", {
+        disable: [
+            function(date) {
+                // Disable Sundays
+                return date.getDay() === 0;
+            }
+        ],
+        dateFormat: "Y-m-d",
+        minDate: currentDate, // Set the minimum selectable date to the current date without the time component
+        maxDate: currentYear + "-12-31", // Set the maximum selectable date to the last day of the current year
+        // Add any additional options you need
+    });
+});

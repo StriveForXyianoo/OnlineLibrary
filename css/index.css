@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(145deg, #71b7e6, #ff7700);
+}
+
+.MainTitle {
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    animation: fadeInUp 1s ease-out;
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 9;
+    cursor: default;
+}
+
+#redirecting {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInUp 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards, blink 1s infinite alternate; /* Combining fadeInUp and blink animations */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .MainTitle {
+        top: 100px; /* Adjust the top position for smaller screens */
+        font-size: 12px; /* Adjust font size for smaller screens */
+        animation: fadeInUpMobile 1s ease-out; /* Adjusted animation for smaller screens */
+    }
+
+    #redirecting {
+        font-size: 10px; /* Adjust font size for smaller screens */
+        animation: fadeInUpMobile 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Adjusted animation for smaller screens */
+    }
+}
+
+@keyframes fadeInUpMobile {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Adjusted translateY for smaller screens */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+}
+
+div {
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+
+div {
+    position: fixed;
+    bottom: 100px;
+    width: 97%;
+    text-align: center;
+    padding: 10px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#wit-logo {
+    position: absolute;
+    top: 260px; /* Adjusted top position */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 200px;
+    z-index: 1;
+}
+
+#wit-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 600px) {
+    #wit-logo {
+        top: 300px; /* Adjusted top position for smaller screens */
+        max-width: 150px; /* Adjusted max-width for smaller screens */
+    }
+}

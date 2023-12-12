@@ -1,0 +1,31 @@
+
+------------------------------
+
+
+CREATE EVENT EditingPenalty
+ON SCHEDULE EVERY 5 SECOND
+DO
+  UPDATE users_db
+  SET
+    users_balance = users_balance + (
+      SELECT COALESCE(SUM(penalty_count), 0) - COALESCE(users_penalty, 0)
+      FROM (
+        SELECT idnum, penalty_count FROM book_status
+        UNION ALL
+        SELECT idnum, penalty_balance FROM book_inventory
+      ) AS combined_penalties
+      WHERE combined_penalties.idnum = users_db.idnum
+    ),
+    users_penalty = (
+      SELECT COALESCE(SUM(penalty_count), 0) 
+      FROM (
+        SELECT idnum, penalty_count FROM book_status
+        UNION ALL
+        SELECT idnum, penalty_balance FROM book_inventory
+      ) AS combined_penalties
+      WHERE combined_penalties.idnum = users_db.idnum
+    );
+
+
+
+

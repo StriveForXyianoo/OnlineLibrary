@@ -1,0 +1,873 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #fff;
+    background-image: url(Sidew.png);
+    background-size: cover;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+li{
+   list-style: none;
+   color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+a:hover{
+    color: orangered;
+}
+
+header{
+    position:  relative;
+    padding: 0 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    float: left;
+    padding: 10px 5px;
+    top: 25px;
+   
+}
+
+/* Style for the logo image */
+.logo img {
+    max-width: 100%;
+    height: 100px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .logo {
+        float: none;
+        text-align: center;
+    }
+}
+
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.container-borrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    width: 1000px;
+    height: 500px;
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+.blur-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 45px 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    display: block;
+}
+
+
+/**   FOR MAIN CONTENT     **/
+
+.main-title{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 3px;
+    font-size: 25px;
+}
+
+.rights1, .rights2, .rights3, .rights4, .rights5, .rights6 {
+
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    body{
+        height: 100vh;
+        background-color: #fff;
+        background-image: url(Sidep.png);
+        background-size: cover;
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    
+    }
+
+    .container-borrow {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 45%;
+        width: 85%;
+        height: 500px;
+        background-image: url('');
+        background-size: cover;
+        position: relative;
+    }
+    
+    .blur-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 45px 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .main-title{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 10%;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    
+    .rights1, .rights2, .rights3, .rights4, .rights5, .rights6 {
+    
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+    
+}
+/**   FOR MAIN CONTENT     **/
+
+
+
+
+
+
+
+
+
+
+
+/**   FOR FINES     **/
+
+.container-fine {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    width: 1000px;
+    height: 450px;
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.blur-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 45px 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    display: block;
+}
+
+
+/**   FOR MAIN CONTENT     **/
+
+.main-title-fine{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 3px;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.fine1, .fine2, .fine3, .finea, .fineb {
+    color: #ffffff; 
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+
+@media (max-width: 768px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    body{
+        height: 100vh;
+        background-color: #fff;
+        background-image: url(Sidep.png);
+        background-size: cover;
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    
+    }
+
+    .container-fine {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 35%;
+        width: 70%;
+        height: 500px;
+        background-image: url('');
+        background-size: cover;
+        position: relative;
+    }
+    
+    .blur-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 45px 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .main-title-fine{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 5%;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        font-size: 15px;
+        z-index: 9;
+        font-weight: bolder;
+    }
+    
+    .fine1, .fine2, .fine3, .finea, .fineb {
+
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+    
+}
+
+/**   FOR FINES     **/
+
+
+
+
+
+
+
+
+
+/**   FOR LOST     **/
+
+.container-lost {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    width: 1000px;
+    height: 450px;
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.blur-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 45px 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    display: block;
+}
+
+
+/**   FOR MAIN CONTENT     **/
+
+.main-title-lost{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 15%;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 3px;
+    font-size: 28px;
+}
+
+.lost1, .lost2 {
+
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+   
+}
+
+@media (max-width: 768px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    body{
+        height: 100vh;
+        background-color: #fff;
+        background-image: url(Sidep.png);
+        background-size: cover;
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    
+    }
+
+    .container-lost {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        width: 80%;
+        height: 70vh;
+        background-image: url('');
+        background-size: cover;
+        position: relative;
+        padding: 10px;
+    }
+    
+    .blur-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 45px 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .main-title-lost{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 15%;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        font-size: 12px;
+        font-weight: bold;
+        z-index: 9;
+    }
+    
+    .lost1, .lost2 {
+
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: justify;
+    }
+    
+}
+
+/**   FOR LOST     **/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**   FOR BORROWING SCHEDULE      **/
+
+.container-sched {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    width: 1000px;
+    height: 500px;
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.blur-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+        backdrop-filter: blur(15px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 45px 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    display: block;
+}
+
+
+/**   FOR MAIN CONTENT     **/
+
+.main-title-sched{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 3px;
+    font-size: 28px;
+}
+
+.sched, .sched1, .sched2, .requir, .requir1, .requir2, .note, .note1, .note2, .note3  {
+
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: lighter;
+   
+}
+
+@media (max-width: 768px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    body{
+        height: 100vh;
+        background-color: #fff;
+        background-image: url(Sidep.png);
+        background-size: cover;
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    
+    }
+
+    .container-sched {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        width: 80%;
+        height: 550px;
+        background-image: url('');
+        background-size: cover;
+        position: relative;
+    }
+    
+    .blur-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 40px rgba(8,7,16,0.6);
+            padding: 45px 35px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .main-title-sched{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 10%;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 3px;
+        font-size: 12px;
+        font-weight: bold;
+        z-index: 9;
+    }
+    
+    .sched, .sched1, .sched2, .requir, .requir1, .requir2, .note, .note1, .note2, .note3  {
+
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    
+}
+
+/**   FOR LOST     **/
+
+
+
+.header{
+    font-size: 25px;
+    letter-spacing: 2px;
+  
+}
+
+.div1{
+    width: 50%;
+    float: left;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.div2{
+    width: 50%;
+    float: right;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+.nnb {
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 85, 0, 0.8);
+    padding-top:10px;
+}
+.divider{
+    width: 850px;
+    height: 3px;
+    background-color: #fff;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.OL{
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.OL h2{
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.OL h3{
+    margin-top: 10px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+    .header{
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .header h3{
+        font-size: 12px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .header h1{
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .div1{
+        width: 50%;
+        float: left;
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .div1 p{
+        font-size: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .div2 p{
+        font-size: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .div2{
+        width: 50%;
+        float: right;
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .nnb{
+        letter-spacing: 2px;
+        font-size: 15px;
+        margin-top: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .divider{
+        width: 200px;
+        height: 2px;
+        background-color: #fff;
+        display: inline-block;
+        
+    }
+    
+    .OL{
+        font-size: 15px;
+        letter-spacing: 3px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .OL h2{
+        font-size: 15px;
+        margin-top: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .OL h3{
+        font-size: 12px;
+        margin-top: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+/**   DIRI ADD   **/
+
+.header{
+    font-size:25px;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.header h3{
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ff7700 ;
+    margin-top: -70px;
+}
+.header h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: -20px;
+}
+.list {
+    justify-content: baseline;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.list1, .list2, .list3, .list4 {
+    width: 1000px; 
+    display: inline-block; 
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 10px; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-weight: lighter;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .header{
+        font-size:15px;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .header h3{
+        color: #ff7700;
+    }
+    
+    .header h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .list{
+        justify-content:baseline;
+        letter-spacing: 1px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .list h2{
+     font-size: 10px;
+     letter-spacing: 1px;
+     font-family: 'Open Sans', sans-serif;
+     line-height: 20px;
+     text-align: justify;
+     font-weight: 1000;
+    }
+    
+}
+
+/* Your other styles go here */
+
+.logout-icon-button {
+    background-color: #dc3545; /* Red color, you can change it to your preferred color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 3px 10px; /* Adjust the padding as needed */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 13px; /* Adjust the font size as needed */
+    transition: background-color 0.3s ease; /* Smooth transition for the background color */
+}
+
+/* Hover effect */
+.logout-icon-button:hover {
+    background-color: #c82333; /* Darker red on hover, adjust as needed */
+}

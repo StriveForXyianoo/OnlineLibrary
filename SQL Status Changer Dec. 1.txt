@@ -1,0 +1,17 @@
+DELIMITER //
+
+CREATE EVENT StatusChecker
+  ON SCHEDULE EVERY 1 HOUR
+  DO
+  BEGIN
+    -- Update status to "Late-Return" for books that are "On-Hand" and past the return date
+    UPDATE book_status
+    SET status = 'Late-Return'
+    WHERE status = 'On-Hand' AND date_return < CURDATE();
+
+    -- Additional actions can be added here if needed
+  END;
+
+//
+
+DELIMITER ;

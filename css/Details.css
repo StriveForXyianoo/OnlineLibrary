@@ -1,0 +1,1290 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+}
+
+
+/******************************************/
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style for list items */
+ul.navbar li {
+    float: right; 
+    margin-right: 5px;
+}
+
+/* Style for links */
+ul.navbar li a {
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Style for links on hover */
+ul.navbar li.dashboard {
+    margin-right: 20px; /* Add margin to separate from the next list item */
+}
+
+.navbar-logo {
+
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+
+}
+.navbar-logo img{
+    width: 45px;
+    height: 40px;
+    top: 5px;
+    position: absolute;
+    left: 20px;
+}
+
+/******************************************/
+.search-content{
+    position: absolute;
+    left: 20px;
+    width: 500px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    background-color: whitesmoke;
+}
+
+.main_title h1{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.search-box{
+    position: absolute;
+    margin-top: -7px;
+    width: 400px;
+    height: 30px;
+    border-radius: 8px;
+}
+.search-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    position: absolute;
+    width: 55px;
+    height: 35px;
+    left: 410px;
+    text-align: center;
+    bottom: -27px
+}
+
+.search-bar{
+    position: absolute;
+    left: 20px;
+    
+}
+
+.search-button:hover{
+    background-color: orangered;
+}
+
+.below-text{
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+}
+
+.below-text p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 140px;
+}
+
+.caption {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/******************************************/
+
+.book-image {
+    width: 200px;
+    height: 240px;
+    background-color: none;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    position: absolute;
+    top: 200px;
+    left: 3%;
+    font-size: 10px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    box-shadow: 0 0 20px rgba(255, 119, 0, 0.751);
+}
+
+.book-logo {
+    width: 200px;
+    height: 240px;
+}
+
+
+
+/***********************************/
+.info{
+    position: absolute;
+    top: 220px;
+    left: 20%;
+}
+
+
+.title{
+   
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+
+.author{
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.publisher{
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.copy-date{
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.quantity{
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.section{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11x;
+    margin-top: 20px;
+}
+
+
+
+.available{
+   
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 30px;
+    color: red;
+}
+
+
+/***********************************/
+/***********************************/
+
+.info-below{
+    position: absolute;
+    top: 460px;
+    left: 3%;
+}
+
+.place-publicated{
+    
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+
+    margin-top: 10px;
+}
+.subject{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+
+    margin-top: 10px;
+}
+
+
+.isbn{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+
+    margin-top: 10px;
+}
+
+.book-quantity {
+    /* Your CSS styles here */
+    font-size: 13px;
+    color: rgb(255, 0, 0);
+    
+}
+
+.book-title {
+    /* Your CSS styles here */
+    font-size: 22px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #ff7700;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+    width: 350px; /* Set the width of the box */
+    /* Set the height of the box */
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allow text to wrap */
+    line-height: 1.2; /* Adjust line height for better readability */
+    margin: 0; /* Reset margin for better appearance */
+}
+
+
+
+/***********************************/
+
+.button-container {
+    display: flex;
+}
+
+.library-btn {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    margin-right: 10px; /* Margin between buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.library-btn:hover {
+    background-color: #ff7700; /* Darker blue color on hover */
+}
+
+.preview {
+    width: 500px;
+    height: 480px;
+    border-radius: 8px;
+    background-color: none;
+    border: 2px solid #000000;
+    position: absolute;
+    right: 5%;
+    top: 70px;
+    font-size: 10px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    box-shadow: 0 0 20px rgba(255, 119, 0, 0.751);
+    
+}
+
+.preview img{
+    height: 480px;
+    width: 500px;
+    border-radius: 8px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+  
+  /* Styling for the form */
+  .form-container-borrow {
+    background-color: rgba(250, 250, 250, 0.446);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    width: 500px;
+    height: 300px;
+    max-width: 800px;
+    z-index: 99999;
+    position: relative;
+  }
+
+/* CSS */
+
+  
+  .closebtn{
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    background-color: #ff7700;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .closebtn :hover{
+    background-color: #a76224;
+  }
+  
+
+
+
+.form-container-borrow h2{
+    position: absolute;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+    top: 5px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+
+p{
+    float: left;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/**********************************/
+.form-container-user {
+    background-color: rgba(250, 250, 250, 0.446);
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 40px 35px;
+    width: 480px;
+    height: 390px;
+    max-width: 800px;
+    z-index: 99999;
+    position: relative;
+
+  }
+
+  .form-container-user h2{
+    position: absolute;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+    top: 5px;
+    transform: translate(-50%,-50%);
+    left: 53%;
+    font-size: 30px;
+  color: #ffffff;   
+}
+.lost-books,
+.library-balance,
+.on-hand-books {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin: 20px;
+}
+.user-address {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #333; 
+    margin: 20px;
+}
+
+.user-contact {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #333; 
+    margin: 20px;
+}
+
+.course-label {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #333; 
+
+  }
+
+.form-container-user p{
+    float: left;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    text-align: left;
+    line-height: 10px;
+}
+
+/**********************************/
+
+
+  /* CSS for the form container */
+  .box {
+    display: none;
+    padding: 20px;
+    border: 2px solid #ffffff;
+    margin-top: 10px;
+    width: 800px; /* Set the width of the boxes */
+    height: 400px;
+    z-index: 5;
+    cursor: auto;
+    position: relative;
+    bottom: 400px;
+    right: 50px;
+    border-radius: 15px;
+    background: rgba(58, 58, 58, 0.698);
+    backdrop-filter: blur(5px);
+}
+
+.close-button1 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.box-logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 70px; /* Adjust the size as needed */
+    height: 70px; /* Adjust the size as needed */
+}
+
+.action-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 300px; /* Set button width */
+    padding-top: 20px;
+    border-radius: 15px;
+    font-size: 25px; /* Enlarged font size */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+
+.reserve-button {
+    background-image: url('reserve.png');
+    background-color: #0074D9; 
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: center center; 
+    height: 170px;
+    width: 300px;
+    
+}
+
+.order-button {
+    background-image: url('cart.png');
+    background-color: #2ECC40; 
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: center center; 
+    height: 170px;
+    width: 300px;
+}
+
+.history-button {
+    background-image: url('shelf.png');
+    background-color: #FF4136;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: center center; 
+    height: 170px;
+    width: 300px;
+}
+
+.wishlist-button {
+    background-image: url('wishlist.png');
+    background-color: #FF851B; 
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    height: 170px;
+    width: 300px;
+}
+
+.position-btn{
+position: absolute;
+top: 40px;
+}
+
+mark {
+    -webkit-animation: 2.0s highlight 2.0s 1 normal forwards;
+            animation: 2.0s highlight 2.0s 1 normal forwards;
+    background-color: none;
+    background: linear-gradient(90deg, #7efff5 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+  }
+  
+  @-webkit-keyframes highlight {
+    to {
+      background-position: 0 0;
+    }
+  }
+  
+  @keyframes highlight {
+    to {
+      background-position: 0 0;
+    }
+  }
+
+
+/*****************************************/
+.custom-container {
+    width: 100%;
+    max-width: 450px;
+    height: 100px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 540px;
+    left: 250px;
+}
+
+.center-container {
+    width: 300px; /* Set your desired width */
+    margin: 0 auto;
+}
+
+.custom-text {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+
+.custom-button-borrow {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, font-size 0.2s ease;
+    margin: 5px; 
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.custom-form {
+    position: fixed;
+    width: 600px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    display: none;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+/*****************************************/
+
+.form-container-borrow {
+    text-align: center;
+}
+
+.centered-form {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    width: 390px;
+    height: 250px;
+}
+
+.form-group {
+    margin: 15px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-form label {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.centered-form input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.centered-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    bottom: 50px;
+}
+
+.centered-form button:hover {
+    background-color: #0056b3;
+}
+
+.form-group label{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.form-group p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    text-align: justify;
+    
+}
+
+@media (max-width: 600px) {
+    .search-content {
+        position: absolute;
+        left: 50%;
+        width: 400px;
+        height: 100px;
+        transform: translateX(-50%);
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        top: 60px;
+        background-color: whitesmoke;
+    }
+    
+
+    body .search-content h1 {
+        text-align: center !important;
+    }
+    
+    
+    .search-box{
+        position: absolute;
+        margin-top: -7px;
+        width: 200px;
+        height: 25px;
+        border-radius: 8px;
+        font-size: 8px;
+    }
+    .preview {
+        width: 320px;
+        height: 400px;
+        border-radius: 8px;
+        background-color: none;
+        border: 2px solid #000000;
+        position: absolute;
+        right: 5%;
+        top: 650px;
+        font-size: 10px;
+        text-align: center;
+        justify-content: center;
+        font-weight: bolder;
+        box-shadow: 0 0 20px rgba(255, 119, 0, 0.751);
+        
+    }
+    
+    .preview img{
+        height: 400px;
+        width: 320px;
+        border-radius: 8px;
+    }
+    ul.navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+    }
+    .search-button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 5px;
+        cursor: pointer;
+        position: absolute;
+        width: 55px;
+        height: 30px;
+        left: 210px;
+        text-align: center;
+        bottom: -24px
+    }
+    
+    .search-bar{
+        position: absolute;
+        left: 20px;
+    }
+    
+    .main_title h1{
+        text-align: left;
+        font-size: 20px;
+        letter-spacing: 2px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .below-text{
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+    }
+    
+    .below-text p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8px;
+        letter-spacing: 2px;
+        text-align: left;
+        display: none;
+    }
+    ul.navbar li {
+        float: right; 
+        margin-right: 5px;
+    }
+    
+    /* Style for links */
+    ul.navbar li a {
+        display: block;
+        color: aliceblue;
+        text-align: center;
+        padding: 14px 14px;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    
+    /* Style for links on hover */
+    ul.navbar li.dashboard {
+        margin-right: 5px; /* Add margin to separate from the next list item */
+    }
+    
+    .navbar-logo {
+    
+        font-size: 24px;
+        color: white;
+        padding: 10px;
+    
+    }
+    .navbar-logo img{
+        width: 45px;
+        height: 40px;
+        top: 5px;
+        position: absolute;
+        left: 20px;
+    }
+    .book-image {
+        width: 120px;
+        height: 150px;
+        background-color: none;
+        border: 3px solid #000000;
+        border-radius: 20px;
+        position: absolute;
+        top: 200px;
+        left: 3%;
+        font-size: 10px;
+        text-align: center;
+        justify-content: center;
+        font-weight: bolder;
+        box-shadow: 0 0 20px rgba(255, 119, 0, 0.751);
+    }
+    .book-logo {
+        width: 120px;
+        height: 150px;
+    }
+
+    .title{
+   
+        font-family: 'Open Sans', sans-serif;
+        font-size: 11px;
+    }
+    
+    
+    
+    .author{
+        
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+    
+    .publisher{
+        
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    
+    .copy-date{
+        
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    .quantity{
+        
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    
+    .section{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        margin-top: 15px;
+    }
+    .info{
+        position: absolute;
+        top: 200px;
+        left: 40%;
+    }
+
+    .info-below{
+        position: absolute;
+        top: 390px;
+        left: 3%;
+    }
+    
+    .place-publicated{
+        
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+    
+        margin-top: 10px;
+    }
+    .subject{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+    
+        margin-top: 10px;
+    }
+    
+    
+    .isbn{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+    
+        margin-top: 10px;
+    }
+    
+    .book-quantity {
+       
+        font-size: 10px;
+        color: rgb(255, 0, 0);
+        
+    }
+    
+    .book-title {
+        /* Your CSS styles here */
+        font-size: 20px; /* Adjust the font size as needed */
+        font-weight: bold;
+        color: #ff7700;
+        letter-spacing: 1px;
+        font-family: 'Open Sans', sans-serif;
+        width: 200px; /* Set the width of the box */
+        /* Set the height of the box */
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal; /* Allow text to wrap */
+        line-height: 1.2; /* Adjust line height for better readability */
+        margin: 0; /* Reset margin for better appearance */
+    }
+    
+    
+    .custom-container {
+        width: 100%;
+        max-width: 450px;
+        height: 100px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 540px;
+        left: 10px;
+    }
+    .custom-button {
+        flex: 1;
+        height: 100%;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s, font-size 0.2s ease;
+        margin: 5px; 
+        border-radius: 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        font-weight: bolder;
+    }
+
+    .form-container-user {
+        background-color: rgba(250, 250, 250, 0.446);
+        padding: 10px;
+        border-radius: 12px;
+        backdrop-filter: blur(5px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 40px 35px;
+        width: 280px;
+        height: 400px;
+        max-width: 800px;
+        z-index: 99999;
+        position: relative;
+    
+      }
+      .center-container {
+        width: 300px; /* Set your desired width */
+        margin: 0 auto;
+    }
+    
+    .custom-text {
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+    }
+    
+    
+    
+      .form-container-user h2{
+        position: absolute;
+        text-align: center;
+        letter-spacing: 2px;
+        font-family: 'Open Sans', sans-serif;
+        top: 15px;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        font-size: 25px;
+      color: #ffffff;   
+    }
+    
+    .form-container-user p{
+        float: left;
+        letter-spacing: 2px;
+        font-size: 13px;
+        font-family: 'Open Sans', sans-serif;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        text-align: left;
+        line-height: 10px;
+    }
+
+    .lost-books,
+    .library-balance,
+    .on-hand-books {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: #333;
+        margin: 20px;
+    }
+    .user-address {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: #333; 
+        margin: 20px;
+    }
+    
+    .user-contact {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: #333; 
+        margin: 20px;
+    }
+    
+    .course-label {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: #333; 
+    
+      }
+    
+}
+
+input[type="date"].sunday {
+    color: red;
+}
+
+.input-box {
+    width: 80%;
+    
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+  .upload-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .upload-form-container label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .file-input {
+    margin-bottom: 10px;
+  }
+  
+  .upload-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .upload-button:hover {
+    background-color: #45a049;
+  }
+  .closebtn1 {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #e74c3c; /* Red background color */
+    border: 1px solid #c0392b; /* Darker red border */
+    border-radius: 50%; /* Make it a circle */
+    color: #fff; /* White text color */
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .closebtn1:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    border: 1px solid #a5291a; /* Darker border on hover */
+  }
+
+/****************************FOR 3 BUTTONS*********************************************/
+
+  #openFormBtn2.custom-button-borrow {
+    width: 120px; 
+    max-width: 120px;
+    height: 40px; 
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 5px; 
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #00dd67; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    border: 1px solid #3498db; /* Set your desired border color */
+    position: relative;
+    overflow: hidden;
+}
+
+#openFormBtn2.custom-button-borrow:hover {
+    background-color: #ff8433; /* Set your desired background color on hover */
+    border-color: #2980b9; /* Set your desired border color on hover */
+}
+
+#openFormBtn2.custom-button-borrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #2c3e50; /* Set your desired background color */
+    transition: left 0.3s ease;
+}
+
+#openFormBtn2.custom-button-borrow:hover::before {
+    left: 100%;
+}
+
+/******************/
+input.custom-button[name="add_to_reserve"] {
+    width: 120px; 
+    max-width: 120px;
+    height: 40px; 
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 5px; 
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #f39c12; /* Set your desired background color for reserve button */
+    color: #fff; /* Set your desired text color */
+    border: 1px solid #f39c12; /* Set your desired border color */
+    position: relative;
+    overflow: hidden;
+}
+
+input.custom-button[name="add_to_reserve"]:hover {
+    background-color: #e67e22; /* Set your desired background color on hover */
+    border-color: #e67e22; /* Set your desired border color on hover */
+}
+
+input.custom-button[name="add_to_reserve"]::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d35400; /* Set your desired background color for animation */
+    transition: top 0.3s ease;
+}
+
+input.custom-button[name="add_to_reserve"]:hover::before {
+    top: 0;
+}
+
+/******************/
+input.custom-button[name="add_to_wishlist"] {
+    width: 120px; 
+    max-width: 120px;
+    height: 40px; 
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 5px; 
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: #3498db; /* Set your desired background color for wishlist button */
+    color: #fff; /* Set your desired text color */
+    border: 1px solid #3498db; /* Set your desired border color */
+    position: relative;
+    overflow: hidden;
+}
+
+input.custom-button[name="add_to_wishlist"]:hover {
+    background-color: #2980b9; /* Set your desired background color on hover */
+    border-color: #2980b9; /* Set your desired border color on hover */
+}
+
+input.custom-button[name="add_to_wishlist"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #2ecc71; /* Set your desired background color for animation */
+    transition: left 0.3s ease;
+}
+
+input.custom-button[name="add_to_wishlist"]:hover::before {
+    left: 100%;
+}
+
+/****************************FOR 3 BUTTONS*********************************************/

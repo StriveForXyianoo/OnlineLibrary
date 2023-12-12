@@ -1,0 +1,18 @@
+DELIMITER //
+
+CREATE EVENT TotalPenaltyCount
+ON SCHEDULE EVERY 5 SECOND
+DO
+BEGIN
+    UPDATE users_db
+    SET users_penalty = (
+        SELECT COALESCE(SUM(bs.penalty_count), 0) + COALESCE(SUM(bi.penalty_balance), 0)
+        FROM users_db u
+        LEFT JOIN book_status bs ON u.idnum = bs.idnum
+        LEFT JOIN book_inventory bi ON u.idnum = bi.idnum
+        WHERE u.idnum = users_db.idnum
+    )
+    WHERE idnum IN (SELECT idnum FROM book_status UNION SELECT idnum FROM book_inventory);
+END //
+
+DELIMITER ;

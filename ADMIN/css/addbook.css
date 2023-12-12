@@ -1,0 +1,672 @@
+.maintitle h1{
+    text-align: center;
+    justify-content: center;
+    }
+    
+    
+    
+    h1 {
+        font-size: 20px;
+        color: #000000;
+        text-align: center;
+    
+      }
+
+      .back-btn{
+        position: absolute;
+        right: 70px;
+        font-size: 12px;
+        font-family: 'Open Sans', sans-serif;
+        top: 20px;
+        cursor: pointer;
+    
+    }
+    
+    .back-btn a{
+        text-decoration: none;
+        color: inherit;
+        font-weight: bolder;
+    }
+    
+    .back-btn a:hover{
+    color: #eee;
+    }
+
+    .background-main{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 300px;
+      }
+    
+      .mainlogo{
+        width: 450px;
+        height:300px;
+        opacity: 25%;
+      }
+
+
+      .topnav {
+        background-color: #ff7700;
+        overflow: hidden;
+        border-radius: 8px;
+        
+      }
+  
+      
+      .topnav-column {
+        float: left;
+        width: 33.33%; 
+        text-align: center;
+      }
+  
+     
+      .topnav-button {
+        display: inline-block;
+        padding: 7px 20px;
+        background-color: #ff7700;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .footer {
+        background-color: #ff7700;
+        position: absolute;
+        bottom: 5px;
+        width: 20%; /* Make the footer occupy the entire width */
+        overflow: hidden;
+        text-align: center;
+        border-radius: 8px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      /* Style for the buttons inside the footer */
+      .footer-button {
+       
+        padding: px 30px;
+        
+        color: #ff7700;
+        text-decoration: none;
+        text-align: center;
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+      
+
+      .form-container-books {
+        
+        position: fixed;
+        width: 1200px;
+        max-width: 1200px;
+        height: 500px;
+        top: 54%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        border-radius: 8px;
+    }
+
+    
+    .form-container-books h2 {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: -5px;
+    }
+
+
+      .form-container {
+        
+        position: fixed;
+        width: 1000px;
+        height: 400px;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+
+    .form-container h2 {
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: -5px;
+    }
+
+    .close-btn{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 70px;
+        height: 20px;
+        }   
+
+
+.note{
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+
+.takenote {
+    font-size: 15px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.takenote:hover {
+    color: #ff7700;
+}
+
+.form-container-note {
+    display: none;
+    position: fixed;
+    width: 150px;
+    height: 270px;
+    top: 120px;
+    left: 80px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    border-radius: 12px;
+}
+
+.close-btn-note{
+    position: absolute;
+;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 5px;
+    width: 50px;
+    height: 20px;
+    }   
+
+
+.form-container-note h2{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    margin-top: -5px;
+    color: red;
+}
+
+.form-container-note p{
+    font-family: 'Open Sans', sans-serif;
+font-size: 15px;
+text-align: justify;
+line-height: 20px;
+}
+
+
+
+.left-form {
+    float: left;
+    width: 50%;
+}
+
+/* Styles for form labels */
+form label {
+    display: inline-block;
+    width: 35%; /* Adjust the width as needed */
+    text-align: center;
+    margin-right: 5px; /* Add some spacing between label and input */
+}
+
+/* Styles for form input fields */
+form input {
+    width: 40%; /* Adjust the width as needed */
+    padding: 2px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+form button[type="submit"] {
+    background-color: #0074cc;
+    color: #fff;
+    padding: 7px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upload-pic{
+    float: right;
+    position: absolute;
+    right: 250px;
+    width: 40%;
+}
+.center-content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Styles for the labels */
+.center-content label {
+    display: block;
+    margin: 10px auto; /* Center the label horizontally and provide vertical spacing */
+}
+
+/* Styles for the file input fields */
+.center-content input[type="file"] {
+    display: block;
+    margin: 0 auto; /* Center the input element horizontally */
+}
+
+
+
+.preview-box1 {
+    margin: 10px;
+    background-size: cover;
+    position: absolute;
+    right: 220px;
+    top: 50px;
+}
+
+.preview-box2 {
+    margin: 10px;
+    position: absolute;
+    right: 220px;
+    top: 220px;
+}
+
+
+
+
+
+.box1 {
+    width: 150px;
+    height: 130px;
+    border: 1px solid #ccc;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+
+}
+
+.box2 {
+    width: 150px;
+    height: 130px;
+    border: 1px solid #ccc;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+ 
+}
+
+
+
+/* Style for the form itself */
+.custom-form {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+width: 220px; /* Set the width */
+height: 90px; /* Set the height */
+border: 1px #ff7700 solid;
+border-radius: 8px;
+position: absolute;
+left: 25px;
+top: 90px;
+}
+
+/* Style for the label */
+.custom-label {
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    width: 200px;
+    margin-top: 5px;
+}
+
+/* Style for the select element */
+.custom-select-add {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 41%;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.custom-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 60%;
+    text-align: center;
+
+}
+
+/* Style for the submit button */
+.custom-button {
+    padding: 5px 5px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   padding-bottom: 5px;
+}
+
+.custom-button:hover {
+    background-color: #0057b39c;
+}
+
+/* Style for option elements within the select */
+.custom-form select option {
+    text-align: center;
+}
+
+
+
+/* Adjust the table styling */
+.table-container-book{
+    position: absolute;
+    right: 10px;
+    width: 900px;
+    max-height: 450px; /* Set maximum height */
+    overflow-y: scroll; /* Add scrollbar when content exceeds the maximum height */
+    border-collapse: collapse;
+}
+
+.action-header{
+    width: 55px;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.custom-table th {
+    background-color: #ff7700
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.custom-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.custom-table td{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+.table-container{
+    position: absolute;
+    right: 15px;
+    
+}
+
+.update-btn{
+    padding: 3px;
+    margin-bottom: 5px ;
+    border-radius: 8px;
+
+}
+
+
+
+
+.delete-button{
+    padding: 3px;
+    margin-top: 5px ;
+    border-radius: 8px;
+}
+
+
+.delete-button:hover{
+    background-color: #ff7700;
+    }
+
+/* Style the "Update" button */
+
+
+/* Style the form itself */
+
+
+
+.update-form-container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.update-form-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.update-form-column {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.update-form-row {
+    margin-top: 10px;
+}
+
+.update-form-container label {
+    font-weight: bold;
+}
+
+.update-form-container input[type="text"],
+.update-form-container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+/* Previous CSS... */
+
+.update-button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff7700;
+    color: white;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 150px;
+    bottom: 50px;
+}
+
+.update-button:hover {
+    background-color: #ff7700;
+}
+
+/****************************/
+.custom-form-RTS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 220px; /* Set the width */
+    height: 90px; /* Set the height */
+    border: 1px #ff7700 solid;
+    border-radius: 8px;
+    position: absolute;
+    left: 25px;
+    top: 200PX;
+    }
+    
+    /* Style for the label */
+    .custom-label-RTS {
+        margin-bottom: 5px;
+        font-size: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        width: 200px;
+        margin-top: 5px;
+    }
+
+    .custom-select-add {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 41%;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+    
+    .custom-select-RTS {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 60%;
+        text-align: center;
+    
+    }
+    
+
+
+/****************************/
+
+
+.custom-form-RTS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 220px; /* Set the width */
+    height: 90px; /* Set the height */
+    border: 1px #ff7700 solid;
+    border-radius: 8px;
+    position: absolute;
+    left: 25px;
+    top: 220PX;
+    }
+    
+    /* Style for the label */
+    .custom-label-graduate {
+        margin-bottom: 5px;
+        font-size: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        width: 200px;
+        margin-top: 5px;
+    }
+
+    .custom-select-add {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 41%;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+    
+    .custom-select-RTS {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 60%;
+        text-align: center;
+    
+    }
+
+/****************************/
+
+
+/****************************/
+
+
+.custom-form-GraduateLibrary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 220px; /* Set the width */
+    height: 90px; /* Set the height */
+    border: 1px #ff7700 solid;
+    border-radius: 8px;
+    position: absolute;
+    left: 25px;
+    top: 350PX;
+    }
+    
+    /* Style for the label */
+    .custom-label-GraduateLibrary {
+        margin-bottom: 5px;
+        font-size: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        width: 200px;
+        margin-top: 5px;
+    }
+
+    .custom-select-add {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 41%;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+    
+    .custom-select-GraduateLibrary {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 60%;
+        text-align: center;
+    
+    }
+
+/****************************/

@@ -1,0 +1,132 @@
+DELIMITER $$
+
+CREATE EVENT DeleteOldReservations
+ON SCHEDULE EVERY 1 MINUTE
+DO
+BEGIN
+    DELETE FROM reserve_book
+    WHERE inserted_at < NOW() - INTERVAL 24 HOUR;
+END $$
+
+DELIMITER ;
+
+
+
+For Reserve Book Timer
+
+-------------------------------------------------------------
+
+DELIMITER $$
+
+CREATE EVENT UpdateBookStatus
+ON SCHEDULE EVERY 1 HOUR
+DO
+BEGIN
+    UPDATE book_status
+    SET status = 'Unreturned'
+    WHERE status = 'On-Hand' AND date_return < NOW() - INTERVAL 24 HOUR;
+END $$
+
+DELIMITER ;
+
+
+for changing the status to Unreturned if LATE
+--------------------------------------------------------------
+
+
+
+
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $userEmail = $_POST['user_email'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $idnum = $_POST['idnum'];
+    $course = $_POST['course'];
+    $bk_title = $_POST['bk_title'];
+    $message = $_POST['message'];
+    $section = $_POST['section'];
+    $isbn = $_POST['isbn'];
+
+    if (!empty($userEmail)) {
+        $mail = new PHPMailer();
+        
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'calderon.janrasheedcit2011@gmail.com';
+        $mail->Password = 'tfeyfpskdtvbtsvs';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
+
+        $mail->setFrom('librarysample2011@gmail.com', 'WIT LIBRARY ADMINISTRATION');
+        $mail->addAddress($userEmail);
+
+        $mail->isHTML(true);
+        $mail->Subject = 'Western Institute of Technology Book Inquiring Confirmation Message';
+
+        $confirmationMessage = "<p>" . $message . "</p>";
+        $additionalMessage = "Good Day, ";
+        $additionalMessage .= isset($fname) ? "$fname" : "";
+        $additionalMessage .= isset($lname) ? " $lname" : "";
+        $additionalMessage .= isset($idnum) ? " Identification # $idnum" : "";
+        $additionalMessage .= isset($course) ? " the student from $course." : "";
+        
+        $additionalMessage .= "<br><br>I regret to inform you that you have an unsuccessful attempt to request the book ";
+        $additionalMessage .= isset($bk_title) ? $bk_title : "";
+        
+        $additionalMessage .= ", which is located in the ";
+        $additionalMessage .= isset($section) ? $section : "";
+        
+        $additionalMessage .= " .<br>Possibly there were other reasons why you were unable to obtain this book.";
+        
+        $mail->Body = $additionalMessage . "<br>" . $confirmationMessage;
+
+        if ($mail->send()) {
+            // Email sent successfully
+            $hostname = "localhost"; 
+            $username = "root"; 
+            $password = ""; 
+            $database = "database_users"; 
+
+            $conn = mysqli_connect($hostname, $username, $password, $database);
+
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            // Assuming $bookID contains the book ID
+            $isbn = mysqli_real_escape_string($conn, $isbn);
+
+            // Use a prepared statement to delete the record
+            $query = "DELETE FROM books_approval WHERE isbn = ?";
+            $stmt = mysqli_prepare($conn, $query);
+
+            if ($stmt) {
+                mysqli_stmt_bind_param($stmt, 's', $isbn); // 's' represents a string, adjust if ISBN is a different data type
+
+                if (mysqli_stmt_execute($stmt)) {
+                    echo '<script>alert("Email sent successfully and record deleted.");</script>';
+                } else {
+                    echo 'Error: ' . mysqli_error($conn);
+                }
+                mysqli_stmt_close($stmt);
+            } else {
+                echo 'Error: ' . mysqli_error($conn);
+            }
+        } else {
+            echo 'Error: ' . $mail->ErrorInfo;
+        }
+    } else {
+        echo 'Error: The recipient email address is empty';
+    }
+}
+?>
