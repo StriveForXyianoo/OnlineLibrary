@@ -169,7 +169,7 @@ $conn->close();
         <i class="toggle-password fas fa-eye" onclick="togglePasswordVisibility()"></i>
     </div>
  
-        <a href="ADMIN/ForgotPass.php" class="forgetpass">Forget Password?</a>
+        <a href="ADMIN/ForgotPass.php" class="forgetpass">Forgot Password?</a>
         <input type="submit" value="Login" name="login" class="btn1">
       </form>
       <script>

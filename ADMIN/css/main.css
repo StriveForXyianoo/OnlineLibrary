@@ -33,7 +33,7 @@ h1 {
     padding: 0 15px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 10px;
     color: #fff; /* White text color */
     cursor: pointer;
     transition: color 0.3s ease; /* Smooth color transition on hover */
@@ -44,9 +44,9 @@ h1 {
 }
 
 .left-side-box button:hover {
-    color: #e05b00; /* Slightly darker text color on hover */
-    background-color: rgba(255, 119, 0, 0.1); /* Adjusted background color on hover */
-    transform: scale(1.05); /* Slight scale effect on hover */
+    color: #004080; /* Dark blue hover text color */
+    background-color: rgba(255, 119, 0, 0.1);
+    transform: scale(1.05);
 }
 
 

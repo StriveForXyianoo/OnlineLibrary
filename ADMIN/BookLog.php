@@ -22,12 +22,13 @@
 </div>
 
 <div class="left-side-box">
- <button class="button" onclick="window.location='Records.php'">Records</button>
+<button class="button" onclick="window.location='Records.php'">Records</button>
 
- <button class="button" onclick="window.location='BookLog.php'">Book Log</button>
+<button class="button" onclick="window.location='BookLog.php'">Book Log</button>
 
- <button class="button" onclick="window.location='BookSituation.php'">Book Situation</button>
- <?php
+<button class="button" onclick="window.location='BookSituation.php'">Book Situation</button>
+
+<?php
 $hostname = "localhost"; 
 $username = "root";
 $password = "witlibrary2023password";
@@ -36,7 +37,7 @@ $database = "database_users";
 $conn = mysqli_connect($hostname, $username, $password, $database);
 
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+   die("Connection failed: " . mysqli_connect_error());
 }
 
 
@@ -45,12 +46,12 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 $pendingRequestsCount = $row['pending_requests'];
 ?>
- <button class="button" onclick="window.location='BookRequest.php'">Pending Book Request/s <span class="red-text">
-  (<?php echo $pendingRequestsCount; ?>)
+<button class="button" onclick="window.location='BookRequest.php'">Pending Book Request/s <span class="red-text">
+ (<?php echo $pendingRequestsCount; ?>)
 </span>
 </button>
 
- <?php
+<?php
 $hostname = "localhost"; 
 $username = "root";
 $password = "witlibrary2023password";
@@ -59,7 +60,7 @@ $database = "database_users";
 $conn = mysqli_connect($hostname, $username, $password, $database);
 
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+   die("Connection failed: " . mysqli_connect_error());
 }
 
 
@@ -69,18 +70,18 @@ $row_count = mysqli_fetch_assoc($result_pending_count);
 $pending_count = $row_count['count'];
 ?>
 
- <button class="button" onclick="window.location='UsersApproval.php'">Users Approval <span class="red-text">(<?php echo $pending_count; ?>)</span>
+<button class="button" onclick="window.location='UsersApproval.php'">Users Approval <span class="red-text">(<?php echo $pending_count; ?>)</span>
 </button>
 
- <button class="button" onclick="window.location='AddBook.php'">Add Book/s</button>
+<button class="button" onclick="window.location='AddBook.php'">Add Book/s</button>
 
- <button class="button" onclick="window.location='UpdateDelete/UpdateDelete.php'">Book Configurations</button>
+<button class="button" onclick="window.location='UpdateDelete/UpdateDelete.php'">Book Configurations</button>
 
- <button class="button" onclick="window.location='UsersConfiguration.php'">Users Configurations</button>
+<button class="button" onclick="window.location='UsersConfiguration.php'">Users Configurations</button>
 
- <button class="button" onclick="window.location='LibraryLog.php'">Library Log</button>
+<button class="button" onclick="window.location='LibraryLog.php'">Library Log</button>
 
- <button class="button" onclick="window.location='WITImages.php'">WIT Images Updates</button>
+<button class="button" onclick="window.location='WITImages.php'">WIT Images Updates</button>
 </div>
 <!------------------------------------------------------------------------------------------------------------->
 

@@ -220,8 +220,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
             if ($enteredCode === $correctCode) {
                 // Check if the status is not already 'On-Hand'
-                if ($codeRow['status'] !== 'On-Hand') {
-                    $updateQuery = "UPDATE book_status SET status = 'On-Hand' WHERE id = $rowId";
+                if ($codeRow['status'] !== 'Claimed') {
+                    $updateQuery = "UPDATE book_status SET status = 'Claimed' WHERE id = $rowId";
                     $updateResult = mysqli_query($conn, $updateQuery);
             
                     if (!$updateResult) {

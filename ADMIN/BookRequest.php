@@ -22,11 +22,19 @@
 </div>
 
 <div class="left-side-box">
- <button class="button" onclick="window.location='Records.php'">Records</button>
+<button class="button" onclick="window.location='Records.php'">
+    <i class="fas fa-file-alt"></i> Records
+</button>
 
- <button class="button" onclick="window.location='BookLog.php'">Book Log</button>
 
- <button class="button" onclick="window.location='BookSituation.php'">Book Situation</button>
+<button class="button" onclick="window.location='BookLog.php'">
+    <i class="fas fa-book"></i> Book Log
+</button>
+
+
+<button class="button" onclick="window.location='BookSituation.php'">
+    <i class="fas fa-chart-pie"></i> Book Situation
+</button>
 
  <?php
 $hostname = "localhost"; 
@@ -46,10 +54,11 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 $pendingRequestsCount = $row['pending_requests'];
 ?>
- <button class="button" onclick="window.location='BookRequest.php'">Pending Book Request/s <span class="red-text">
-  (<?php echo $pendingRequestsCount; ?>)
-</span>
+<button class="button" onclick="window.location='BookRequest.php'">
+    <i class="fas fa-book"></i> Pending Book Request/s 
+    <span class="red-text">(<?php echo $pendingRequestsCount; ?>)</span>
 </button>
+
 
  <?php
 $hostname = "localhost"; 
@@ -70,18 +79,40 @@ $row_count = mysqli_fetch_assoc($result_pending_count);
 $pending_count = $row_count['count'];
 ?>
 
- <button class="button" onclick="window.location='UsersApproval.php'">Users Approval <span class="red-text">(<?php echo $pending_count; ?>)</span>
+<button class="button" onclick="window.location='UsersApproval.php'">
+    <i class="fas fa-user-check"></i> Users Approval <span class="red-text">(<?php echo $pending_count; ?>)</span>
 </button>
 
- <button class="button" onclick="window.location='AddBook.php'">Add Book/s</button>
+<button class="button" onclick="window.location='AddBook.php'">
+    <i class="fas fa-book-open"></i> Add Book/s
+</button>
 
- <button class="button" onclick="window.location='UpdateDelete/UpdateDelete.php'">Book Configurations</button>
 
- <button class="button" onclick="window.location='UsersConfiguration.php'">Users Configurations</button>
 
- <button class="button" onclick="window.location='LibraryLog.php'">Library Log</button>
+<button class="button" onclick="window.location='UpdateDelete/UpdateDelete.php'">
+    <i class="fas fa-cogs"></i> Book Configurations
+</button>
 
- <button class="button" onclick="window.location='WITImages.php'">WIT Images Updates</button>
+
+<button class="button" onclick="window.location='UsersConfiguration.php'">
+    <i class="fas fa-users-cog"></i> Users Configurations
+</button>
+
+
+<button class="button" onclick="window.location='LibraryLog.php'">
+    <i class="fas fa-list-alt"></i> Library Log
+</button>
+
+
+<button class="button" onclick="window.location='WITImages.php'">
+    <i class="fas fa-images"></i> WIT Images Updates
+</button>
+
+
+ <button class="button" onclick="window.location='AdminNew.php'">
+    <i class="fas fa-user-plus"></i> Create Admin
+</button>
+
 </div>
 
 
