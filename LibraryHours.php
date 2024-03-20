@@ -16,17 +16,7 @@ if (isset($_POST['logout'])) {
 
 if (isset($_SESSION['idnum'])) {
    
-    $host = "localhost"; 
-    $username = "root"; 
-    $password = "witlibrary2023password"; 
-    $database = "database_users"; 
-
-    $conn = new mysqli($host, $username, $password, $database);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
+    include 'Configure.php';
    
     $query = "SELECT lname, fname, addr, email, users_balance, users_lost, users_penalty, users_onhand, course, users_num, suffix FROM users_db WHERE idnum = ?";
     $stmt = $conn->prepare($query);
@@ -102,43 +92,28 @@ $suffix = $_SESSION['suffix'];
         <div class="blur-box">
             <div class="content">
         
+        <h3 class="h3wit">Western Institute of Technology</h3>
 
-       
+        <h2 class="h2hours">LIBRARY HOURS</h2>
+
+        <h3 class="h3monday">Monday To Friday</h3>
+
+        <p>8:00 A.M - 8:00 P.M</p>
+
+        <h3 class="h3saturday">Saturday</h3>
+
+        <p>8:00 A.M - 5:00 P.M</p>
 
 
-        <div class=""><br><br></div>
-  
-        <div class="header">
-            <h3>Western Institute of Technology</h3>
-            <h1>LIBRARY HOURS</h1>
-           </div>
-           <br>
-            <div class="div1">
-                <p>Monday-Friday<p>
-                <p>8:00 A.M - 8:00 P.M</p>
-            </div>
+        <h1 class="h1break">NO NOON BREAK</h1>
 
-            <div class="div2">
-                <p>Saturday</p>
-                <p>8:00 A.M - 5:00 P.M</p>
-            </div>
+        <h2 class="h2loan">Overnight Loans</h2>
+
+        <p class="pmonday">Monday-Friday (6:00 P.M)</p>
+
             <br>
-          
-            <div class="nnb">
-                <h1>NO NOON BREAK</h1>
-            </div>
-            <span class="divider"></span>
-        
 
-            <div class="OL">
-                <h2>Overnight Loans</h2>
-                <h3>Monday-Friday (6:00 P.M)</h3>
-                <h3>Saturday (10:00 A.M)</h3>
-            </div>
-        
-
-
-
+        <p>Saturday (10:00 A.M)</p>
        
             </div>
         </div>

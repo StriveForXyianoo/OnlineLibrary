@@ -16,16 +16,7 @@ if (isset($_POST['logout'])) {
 
 if (isset($_SESSION['idnum'])) {
    
-    $host = "localhost"; 
-    $username = "root"; 
-    $password = "witlibrary2023password"; 
-    $database = "database_users"; 
-
-    $conn = new mysqli($host, $username, $password, $database);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include 'Configure.php';
 
    
     $query = "SELECT lname, fname, addr, email, users_balance, users_lost, users_penalty, users_onhand, course, users_num, suffix FROM users_db WHERE idnum = ?";
@@ -105,26 +96,28 @@ $suffix = $_SESSION['suffix'];
         <div class="blur-box">
             <div class="content">
         
+    <h2>Fines</h2>
 
-       
+    <br>
 
-        <div class="main-title-fine">
-         FINES
+    <p>1. Overdue fees apply to late returns of materials:</p>
+
+    <p>Php5.00/Day-General Circulation Books</p>
+    <p>Php5.00/Hour-Reserve Books</p>
+
+    <br>
+
+    <p>2. When the ULRC is available for service, the Fine is assessed.</p>
+
+    <br>
+
+    <p>3. Until all library accounts are resolved, borrowers who have overdue books or an existing debt to the library will not be permitted to borrow.</p>
+
+
+</div>
         </div>
 
-
-        <div class="fine1"><b>1.</b>  &nbsp;Overdue fees apply to late returns of materials:</div>
-        <div class=""><br><br></div>
-        <div class="finea">Php5.00/Day-General Circulation Books</div>
-        <div class=""><br><br></div>
-        <div class="fineb">Php5.00/Hour-Reserve Books</div>
-        <div class=""><br><br></div>
-        <div class="fine2"><b>2. </b> &nbsp;When the ULRC is available for service, the Fine is assessed.</div>
-        <div class=""><br><br></div>
-        <div class="fine3"><b>3. </b> &nbsp;Until all library accounts are resolved, borrowers who have overdue <br><br>books or an existing debt to the library will not be permitted to borrow.</div>
-
-        
-
+        </div>
 
 </body>
 </html>

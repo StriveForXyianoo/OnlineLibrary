@@ -45,18 +45,7 @@
 
             let activeForm = null;
 
-            function openForm(id) {
-                if (activeForm !== null) {
-                    return; // Only one form can be open at a time
-                }
-                activeForm = id;
-                const form = document.getElementById(`form${id}`);
-                form.style.display = "block";
-                disableOtherBoxes(id);
-    
-                // Add the 'active' class to the form to show the backdrop
-                form.classList.add("active");
-            }
+
     
             function closeForm(id) {
                 const form = document.getElementById(`form${id}`);
@@ -64,7 +53,7 @@
                 enableAllBoxes();
                 activeForm = null;
     
-                // Remove the 'active' class to hide the backdrop
+           
                 form.classList.remove("active");
             }
     

@@ -6,9 +6,17 @@
     <link rel="stylesheet" href="css/main.css?v= <?php echo time(); ?>">
     <link rel="icon" type="image" href="pics/WIT-Logo.png">
     <link rel="stylesheet" href="path/to/custom-lightbox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Include Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <title>WIT Administration library</title>
 </head>
 <body>
@@ -37,16 +45,7 @@
 </button>
 
  <?php
-$hostname = "localhost"; 
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; 
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include '../Configure.php';
 
 
 $query = "SELECT COUNT(*) AS pending_requests FROM books_approval WHERE status = 'Pending'";
@@ -61,16 +60,7 @@ $pendingRequestsCount = $row['pending_requests'];
 
 
  <?php
-$hostname = "localhost"; 
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; 
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 
 $sql_pending_count = "SELECT COUNT(*) AS count FROM users_db WHERE status='Pending'";
@@ -125,16 +115,6 @@ $pending_count = $row_count['count'];
 
     <!--------------------------Insert Code in here ------------------------------------------>
     <?php
-$hostname = "localhost"; 
-$username = "root"; 
-$password = "witlibrary2023password"; 
-$database = "database_users"; 
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 
 $query = "SELECT *, section, date_return, date_borrow FROM books_approval";
@@ -145,24 +125,12 @@ $result = mysqli_query($conn, $query);
 
 <div class="search-form-container">
     <form method="POST" action="BookRequest.php">
-        <input class="search-input" type="text" name="search" placeholder="Search...">
+    <input class="search-input-status" type="text" name="search" placeholder="Search...">
         <button class="search-button" type="submit">Search</button>
     </form>
 </div>
 <?php
 
-$hostname = "localhost";
-$username = "root"; 
-$password = "witlibrary2023password"; 
-$database = "database_users"; 
-
-// Establishing a connection to the database
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-// Check the connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 // Handling the search functionality
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["search"])) {

@@ -74,7 +74,6 @@ if (isset($_SESSION['lname']) && isset($_SESSION['fname']) && isset($_SESSION['a
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Details.css?v= <?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="icon" type="image" href="Pics/WIT-Logo.png">
     <title>Book Details</title>
 </head>
@@ -177,27 +176,17 @@ if (isset($_SESSION['lname']) && isset($_SESSION['fname']) && isset($_SESSION['a
         </form>
     </div>
     <?php
-$hostname = "localhost";
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users";
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
+include '../Configure.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-    // Check if a file was uploaded without errors
+  
     if (isset($_FILES["fileInput"]) && $_FILES["fileInput"]["error"] == 0) {
         $fileTmpName = $_FILES["fileInput"]["tmp_name"];
-        $userRFData = file_get_contents($fileTmpName); // Read file content
+        $userRFData = file_get_contents($fileTmpName);
 
-        // Get the idnum from the form or your session, assuming it's passed through the form
-        $idnum = $_SESSION['idnum']; // Make sure to adjust this based on your actual session implementation
+        
+        $idnum = $_SESSION['idnum']; 
 
-        // Update the users_rf column in the users_db table based on idnum
+     
         $sql = "UPDATE users_db SET users_rf = ? WHERE idnum = ?";
         $stmt = mysqli_prepare($conn, $sql);
 
@@ -585,7 +574,7 @@ if (isset($_POST['add_to_reserve'])) {
     $checkStmt->execute();
     $checkStmt->bind_result($bookCount);
     $checkStmt->fetch();
-    $checkStmt->close(); // Close the result set explicitly
+    $checkStmt->close(); 
 
     if ($bookCount > 0) {
         echo "<script>alert('The book is already in your reserve list.');</script>";
@@ -625,24 +614,23 @@ $conn->close();
 </form>
 
 <?php
-// Starting the session if not already started
+
 if (!isset($_SESSION)) {
     session_start();
 }
 
-// Checking if the user is logged in, redirecting to login.php if not
+
 if (!isset($_SESSION['idnum'])) {
     header("Location: login.php");
     exit();
 }
 
-// Including Configure.php file
+
 @include 'Configure.php';
 
-// Checking if the 'add_to_wishlist' form was submitted
+
 if (isset($_POST['add_to_wishlist'])) {
 
-    // Getting user ID from the session
     $userId = $_SESSION['idnum'];
 
 
@@ -652,38 +640,38 @@ if (isset($_POST['add_to_wishlist'])) {
     $bookISBN = $bookData['isbn'];
     $bookSection = $bookData['section'];
 
-    // Checking if the book is already in the user's wishlist
+
     $checkQuery = "SELECT COUNT(*) FROM wishlist WHERE user_id = ? AND isbn = ?";
     $checkStmt = $conn->prepare($checkQuery);
     $checkStmt->bind_param("is", $userId, $bookISBN);
     $checkStmt->execute();
     $checkStmt->bind_result($bookCount);
     $checkStmt->fetch();
-    $checkStmt->close(); // Close the result set
+    $checkStmt->close(); 
 
-    // If the book is already in the wishlist, display a message and redirect
+   
     if ($bookCount > 0) {
         echo "<script>alert('The book is already in your wishlist.');</script>";
         echo "<script>window.location.href = 'Dashboard.php';</script>";
         exit();
     } else {
-        // If the book is not in the wishlist, insert it into the wishlist
+      
         $insertWishlistQuery = "INSERT INTO wishlist (user_id, book_title, book_author, isbn, section) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($insertWishlistQuery);
         $stmt->bind_param("issis", $userId, $bookTitle, $bookAuthor, $bookISBN, $bookSection);
 
-        // If the insertion is successful, redirect to Dashboard.php
+  
         if ($stmt->execute()) {
             echo "<script>window.location.href = 'Dashboard.php';</script>";
             exit();
         } else {
-            // If insertion fails, display an error message
+         
             echo "<script>alert('Failed to add the book to your wishlist. Please try again.');</script>";
         }
     }
 }
 
-// Closing the database connection
+
 $conn->close();
 ?>
 
@@ -701,14 +689,14 @@ $conn->close();
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var bookQuantity = <?php echo $bookQuantity; ?>; // Assuming $bookQuantity is your PHP variable
+    var bookQuantity = <?php echo $bookQuantity; ?>; 
 
     var borrowButton = document.getElementById("openFormBtn2");
 
     if (bookQuantity === 1) {
         borrowButton.addEventListener("click", function() {
             alert("There is just one copy of the book left in the inventory, so it cannot be checked out.\n \nPlease Cancel the Inquiry.");
-            location.reload(); // Reload the page
+            location.reload(); 
         });
 
         borrowButton.disabled = true;
@@ -729,82 +717,24 @@ document.addEventListener("DOMContentLoaded", function() {
     <input type="date" class="input-box" id="borrow_date" placeholder="Select Date:" name="dateExpectedToBorrow" required>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Get the current date without the time component
-    var currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0);
-
-    // Get the current year
-    var currentYear = currentDate.getFullYear();
-
-    // Initialize Flatpickr with options
-    flatpickr("#borrow_date", {
-        disable: [
-            function(date) {
-                // Disable Sundays
-                return date.getDay() === 0;
-            }
-        ],
-        dateFormat: "Y-m-d",
-        minDate: currentDate, // Set the minimum selectable date to the current date without the time component
-        maxDate: currentYear + "-12-31", // Set the maximum selectable date to the last day of the current year
-        // Add any additional options you need
-    });
-});
-
-    </script>
-
 <div class="form-group">
     <label for="return_date">Date Expected to Return:</label>
-    <input type="date" class="input-box" id="return_date" placeholder="Select Date:" name="dateExpectedToReturn" required>
+    <input type="date" class="input-box" id="return_date" placeholder="Select Date:" name="dateExpectedToReturn" required disabled>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  
-    var currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0);
-
-
-    var currentYear = currentDate.getFullYear();
-
-
-    flatpickr("#return_date", {
-        disable: [
-            function(date) {
-            
-                return date.getDay() === 0;
-            }
-        ],
-        dateFormat: "Y-m-d",
-        minDate: currentDate, 
-        maxDate: currentYear + "-12-31",
-       
-    });
-});
-
-    </script>
 
 <div class="form-group">
-
-        <input type="hidden" name="bookTitle" value="<?php echo $bookTitle; ?>">
-        <input type="hidden" name="bookAuthor" value="<?php echo $bookAuthor; ?>">
-        <input type="hidden" name="users_num" value="<?php echo $usersNum; ?>">
-        <input type="hidden" name="email" value="<?php echo $email; ?>">
-        <input type="hidden" name="course" value="<?php echo $course; ?>">
-        <input type="hidden" name="idnum" value="<?php echo $idnum; ?>">
-        <input type="hidden" name="isbn" value="<?php echo $bookISBN; ?>">
-        <input type="hidden" name="section" value="<?php echo $transformedSection; ?>">  
-        <input type="hidden" name="lname" value="<?php echo $lastName; ?>">  
-        <input type="hidden" name="fname" value="<?php echo $firstName; ?>">  
-        <input type="hidden" name="email" value="<?php echo $email; ?>">
-
- 
+    <input type="hidden" name="bookTitle" value="<?php echo $bookTitle; ?>">
+    <input type="hidden" name="bookAuthor" value="<?php echo $bookAuthor; ?>">
+    <input type="hidden" name="users_num" value="<?php echo $usersNum; ?>">
+    <input type="hidden" name="email" value="<?php echo $email; ?>">
+    <input type="hidden" name="course" value="<?php echo $course; ?>">
+    <input type="hidden" name="idnum" value="<?php echo $idnum; ?>">
+    <input type="hidden" name="isbn" value="<?php echo $bookISBN; ?>">
+    <input type="hidden" name="section" value="<?php echo $transformedSection; ?>">  
+    <input type="hidden" name="lname" value="<?php echo $lastName; ?>">  
+    <input type="hidden" name="fname" value="<?php echo $firstName; ?>">  
+    <input type="hidden" name="email" value="<?php echo $email; ?>">
 </div>
-
-<!-- Add more hidden fields for other book and user information -->
 
 <div class="form-group">
     <p><b>Take Note:</b> &nbsp; Wait for the email will be received from WIT Library Admin for the approval and the confirmation code.</p>
@@ -814,7 +744,70 @@ document.addEventListener('DOMContentLoaded', function () {
     <button type="submit">Inquire</button>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0);
+
+        var currentYear = currentDate.getFullYear();
+        var returnDateInput = document.getElementById('return_date');
+
+        flatpickr("#borrow_date", {
+            disable: [
+                function(date) {
+                    return date.getDay() === 0;
+                }
+            ],
+            dateFormat: "Y-m-d",
+            minDate: currentDate,
+            maxDate: new Date(currentYear, currentDate.getMonth() + 1, 15),
+            onClose: function (selectedDates) {
+            
+                if (selectedDates[0]) {
+                    var minReturnDate = selectedDates[0];
+                    var maxReturnDate = new Date(minReturnDate);
+                    maxReturnDate.setDate(minReturnDate.getDate() + 7);
+
+                    flatpickr("#return_date", {
+                        minDate: minReturnDate,
+                        maxDate: maxReturnDate,
+                        disable: [
+                            function (date) {
+                                return date.getDay() === 0 || date < minReturnDate || date > maxReturnDate;
+                            }
+                        ],
+                        dateFormat: "Y-m-d"
+                    });
+                    returnDateInput.disabled = false;
+                    returnDateInput.focus();
+                }
+            }
+        });
+
+      
+        flatpickr("#return_date", {
+            minDate: currentDate,
+            maxDate: new Date(currentYear, currentDate.getMonth() + 1, 15),
+            disable: [
+                function (date) {
+                    return date.getDay() === 0 || date > new Date(currentYear, currentDate.getMonth() + 1, 15);
+                }
+            ],
+            dateFormat: "Y-m-d"
+        });
+
+        
+        returnDateInput.disabled = true;
+    });
+</script>
+
+
+
+
+
 </form>
+
 
 
     <button class="closebtn" id="closeFormBtn2" role="button">Close</button>
@@ -922,6 +915,6 @@ formOverlay2.style.display = "none";
 
 
          <!--    -->
-        <script type="text/javascript"  src="javascripts/Functions.js"></script>   
+      
         </body>
 </html>

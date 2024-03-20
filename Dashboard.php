@@ -16,16 +16,7 @@ if (isset($_POST['logout'])) {
 
 if (isset($_SESSION['idnum'])) {
    
-    $host = "localhost"; 
-    $username = "root"; 
-    $password = "witlibrary2023password"; 
-    $database = "database_users"; 
-
-    $conn = new mysqli($host, $username, $password, $database);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include 'Configure.php';
 
    
     $query = "SELECT lname, fname, addr, email, users_balance, users_lost, users_penalty, users_onhand, course, users_num, suffix FROM users_db WHERE idnum = ?";
@@ -646,16 +637,7 @@ if (isset($_SESSION['idnum'])) {
         </form>
     </div>
     <?php
-$hostname = "localhost";
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users";
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include '../Configure.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     // Check if a file was uploaded without errors

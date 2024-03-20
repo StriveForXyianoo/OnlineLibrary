@@ -14,6 +14,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <!-- Include Flatpickr JS -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
@@ -47,16 +48,7 @@
 </button>
 
  <?php
-$hostname = "localhost"; 
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; 
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include '../Configure.php';
 
 
 $query = "SELECT COUNT(*) AS pending_requests FROM books_approval WHERE status = 'Pending'";
@@ -71,17 +63,7 @@ $pendingRequestsCount = $row['pending_requests'];
 
 
  <?php
-$hostname = "localhost"; 
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; 
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
+include '../Configure.php';
 
 $sql_pending_count = "SELECT COUNT(*) AS count FROM users_db WHERE status='Pending'";
 $result_pending_count = mysqli_query($conn, $sql_pending_count);
@@ -124,12 +106,98 @@ $pending_count = $row_count['count'];
 </button>
 
 
-
-
-
-
 </div>
 
+
+
+
+<!------------------------------------------------------------------------------------------->
+<?php
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"]; 
+    $confirmPassword = $_POST["confirm-password"];
+
+    if ($password != $confirmPassword) {
+        echo "<script>alert('The Passwords do not match');</script>";
+    } else {
+        // Display a confirmation message with the username and password
+        echo "<script>alert('Admin Name: $username\\nPassword: $password has been created as new Library Admin');</script>";
+
+        // Execute the SQL statement to insert the admin
+        $sql = "INSERT INTO admin_db (user_name, pass) VALUES ('$username', '$password')";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<script>alert('Admin successfully added to the WIT Library System');</script>";
+        } else {
+            echo "<script>alert('Error: " . mysqli_error($conn) . "');</script>";
+        }
+    }
+}
+
+mysqli_close($conn);
+?>
+
+
+
+<div class="custom-form-container-admin">
+
+<div class="configure-button-admin" onclick="window.location.href='AdminUpdate.php';">
+    <i class="fas fa-pencil-alt icon">&nbsp;Edit Admin</i>
+</div>
+
+
+
+
+
+
+    <h2>Create New Admin User</h2>
+
+<form action="AdminNew.php" method="post" class="admin-form" onsubmit="verifyInformation()">
+    <label for="username">Admin Name:</label>
+    <input type="text" id="adminName" name="username" required>
+
+    <label for="password">Password:</label>
+    <div class="password-container">
+        <input type="password" id="password" name="password" required>
+        <span class="password-toggle-1" onclick="togglePasswordVisibility('password')">&#x1F441;</span>
+    </div>
+
+    <label for="retypePassword">Retype Password:</label>
+    <div class="password-container">
+        <input type="password" id="retypePassword" name="confirm-password" required>
+        <span class="password-toggle-2" onclick="togglePasswordVisibility('retypePassword')">&#x1F441;</span>
+    </div>
+
+    <button type="submit">Register Admin</button>
+
+    <script>
+    function togglePasswordVisibility(fieldId) {
+        var passwordField = document.getElementById(fieldId);
+        var icon = document.querySelector('#' + fieldId + ' + .password-toggle-' + fieldId.charAt(fieldId.length - 1));
+
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            icon.innerHTML = '&#x1F440;';
+        } else {
+            passwordField.type = 'password';
+            icon.innerHTML = '&#x1F441;';
+        }
+    }
+
+    function verifyInformation() {
+        alert("Verify Information before submitting.");
+    }
+</script>
+
+
+
+
+</form>
+
+</div>
 
 
 <!---------------------------------------------------------------------------------------------------------->

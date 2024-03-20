@@ -1,19 +1,7 @@
 <?php
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Database connection parameters
-    $dbHost = 'localhost';
-    $dbUser = 'root';
-    $dbPassword = 'witlibrary2023password';
-    $dbName = 'database_users';
-
-    // Create a database connection
-    $conn = new mysqli($dbHost, $dbUser, $dbPassword, $dbName);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include '../Configure.php';
     
     // Get form data
     $bookTitle = $_POST["bookTitle"];

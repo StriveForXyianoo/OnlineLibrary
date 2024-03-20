@@ -60,23 +60,23 @@ if (isset($_GET["logout"]) && $_GET["logout"] == "true") {
 </div>
 
 <div class="left-side-box">
-<button class="button" onclick="window.location='Records.php'">Records</button>
 
-<button class="button" onclick="window.location='BookLog.php'">Book Log</button>
+<button class="button" onclick="window.location='Records.php'">
+    <i class="fas fa-file-alt"></i> Records
+</button>
 
-<button class="button" onclick="window.location='BookSituation.php'">Book Situation</button>
 
-<?php
-$hostname = "localhost"; 
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; 
+<button class="button" onclick="window.location='BookLog.php'">
+    <i class="fas fa-book"></i> Book Log
+</button>
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
 
-if (!$conn) {
-   die("Connection failed: " . mysqli_connect_error());
-}
+<button class="button" onclick="window.location='BookSituation.php'">
+    <i class="fas fa-chart-pie"></i> Book Situation
+</button>
+
+ <?php
+include '../Configure.php';
 
 
 $query = "SELECT COUNT(*) AS pending_requests FROM books_approval WHERE status = 'Pending'";
@@ -84,22 +84,14 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 $pendingRequestsCount = $row['pending_requests'];
 ?>
-<button class="button" onclick="window.location='BookRequest.php'">Pending Book Request/s <span class="red-text">
- (<?php echo $pendingRequestsCount; ?>)
-</span>
+<button class="button" onclick="window.location='BookRequest.php'">
+    <i class="fas fa-book"></i> Pending Book Request/s 
+    <span class="red-text">(<?php echo $pendingRequestsCount; ?>)</span>
 </button>
 
-<?php
-$hostname = "localhost"; 
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; 
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
+ <?php
 
-if (!$conn) {
-   die("Connection failed: " . mysqli_connect_error());
-}
 
 
 $sql_pending_count = "SELECT COUNT(*) AS count FROM users_db WHERE status='Pending'";
@@ -108,18 +100,39 @@ $row_count = mysqli_fetch_assoc($result_pending_count);
 $pending_count = $row_count['count'];
 ?>
 
-<button class="button" onclick="window.location='UsersApproval.php'">Users Approval <span class="red-text">(<?php echo $pending_count; ?>)</span>
+<button class="button" onclick="window.location='UsersApproval.php'">
+    <i class="fas fa-user-check"></i> Users Approval <span class="red-text">(<?php echo $pending_count; ?>)</span>
 </button>
 
-<button class="button" onclick="window.location='AddBook.php'">Add Book/s</button>
+<button class="button" onclick="window.location='AddBook.php'">
+    <i class="fas fa-book-open"></i> Add Book/s
+</button>
 
-<button class="button" onclick="window.location='UpdateDelete/UpdateDelete.php'">Book Configurations</button>
 
-<button class="button" onclick="window.location='UsersConfiguration.php'">Users Configurations</button>
 
-<button class="button" onclick="window.location='LibraryLog.php'">Library Log</button>
+<button class="button" onclick="window.location='UpdateDelete/UpdateDelete.php'">
+    <i class="fas fa-cogs"></i> Book Configurations
+</button>
 
-<button class="button" onclick="window.location='WITImages.php'">WIT Images Updates</button>
+
+<button class="button" onclick="window.location='UsersConfiguration.php'">
+    <i class="fas fa-users-cog"></i> Users Configurations
+</button>
+
+
+<button class="button" onclick="window.location='LibraryLog.php'">
+    <i class="fas fa-list-alt"></i> Library Log
+</button>
+
+
+<button class="button" onclick="window.location='WITImages.php'">
+    <i class="fas fa-images"></i> WIT Images Updates
+</button>
+
+
+ <button class="button" onclick="window.location='AdminNew.php'">
+    <i class="fas fa-user-plus"></i> Create Admin
+</button>
 </div>
 <!----------------------------------------------------------------------------------------------------------------------------------->
 <div class="library-user-log-form">
@@ -131,16 +144,7 @@ $pending_count = $row_count['count'];
 </form>
 
     <?php
-    $hostname = "localhost";
-    $username = "root";
-    $password = "witlibrary2023password";
-    $database = "database_users";
-
-    $conn = mysqli_connect($hostname, $username, $password, $database);
-
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+   
 
     if (isset($_POST['search'])) {
         $searchTerm = mysqli_real_escape_string($conn, $_POST['search']);
@@ -162,16 +166,7 @@ $pending_count = $row_count['count'];
     ?>
     <div class="user-details-container">
     <?php
-$hostname = "localhost";
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users";
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 function generateRandomCode($length = 5) {
     $characters = '123456789abcdefghijklmnopqrstuvwxyz';
@@ -305,7 +300,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_form'])) {
 
     
     $insertQuery = "INSERT INTO book_status (idnum, lname, fname, course, bk_title, isbn, section, date_borrow, date_return, code, status) 
-    SELECT idnum, lname, fname, course, '$bookTitle', '$isbn', '$section', '$dateBorrow', '$dateReturn', '$code', 'On-Hand'
+    SELECT idnum, lname, fname, course, '$bookTitle', '$isbn', '$section', '$dateBorrow', '$dateReturn', '$code', 'Claimed'
     FROM users_db
     WHERE idnum = '$userId'";
 
@@ -390,38 +385,62 @@ mysqli_close($conn);
 ?>
 
 <script>
-
-var currentDate = new Date();
+document.addEventListener('DOMContentLoaded', function () {
+    var currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
-
-
     var currentYear = currentDate.getFullYear();
+    var currentMonth = currentDate.getMonth();
+
+    var borrowDateInput = document.getElementById('date_borrow');
+    var returnDateInput = document.getElementById('date_return');
+
+    var lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    var lastWeekOfCurrentMonth = new Date(currentYear, currentMonth, lastDayOfMonth - 6); // Get the last 7 days of the current month
+
+    var maxDateForBorrow = new Date(currentYear, currentMonth + 2, 0); // Allow selecting up to the end of next month
+
     flatpickr("#date_borrow", {
         disable: [
             function(date) {
-            
-                return date.getDay() === 0;
+                // Disable past dates and Sundays
+                return (date < currentDate || date.getDay() === 0) && date.getMonth() !== currentMonth + 1; 
             }
         ],
         dateFormat: "Y-m-d",
-        minDate: currentDate, 
-        maxDate: currentYear + "-12-31",
+        minDate: currentDate,
+        maxDate: maxDateForBorrow, // Allow selecting up to the end of next month
+        onChange: function(selectedDates, dateStr, instance) {
+            var borrowDate = new Date(dateStr);
+            var nextDay = new Date(borrowDate.getTime() + 24 * 60 * 60 * 1000); // Get the next day
+            var sevenDaysLater = new Date(borrowDate.getTime() + 6 * 24 * 60 * 60 * 1000); // Six days later
+
+            // Adjust maxDate for return date picker
+            var maxDate = new Date(borrowDate.getTime() + 7 * 24 * 60 * 60 * 1000);
+            maxDate.setHours(23, 59, 59, 999); // Set the time to the end of the day
+
+            flatpickr("#date_return", {
+                disable: [
+                    function(date) {
+                        return date.getDay() === 0; // Exclude Sundays
+                    }
+                ],
+                dateFormat: "Y-m-d",
+                minDate: borrowDate, // Allow selecting borrowing date
+                maxDate: maxDate
+            });
+
+            returnDateInput.disabled = false;
+            returnDateInput.focus();
+        }
     });
 
-    flatpickr("#date_return", {
-        disable: [
-            function(date) {
-            
-                return date.getDay() === 0;
-            }
-        ],
-        dateFormat: "Y-m-d",
-        minDate: currentDate, 
-        maxDate: currentYear + "-12-31",
-    });
-  </script>
+    returnDateInput.disabled = true;
+});
+</script>
 
-<!-- Modal to display the image -->
+
+
+
 <div id="imageModal" class="modal-log">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -430,35 +449,35 @@ var currentDate = new Date();
 </div>
 
 <script>
-// Function to open the modal with the image
+
 function openModal(imageSrc) {
     $("#modalImage").attr("src", imageSrc);
     $("#imageModal").css("display", "block");
 }
 
-// Function to close the modal
+
 function closeModal() {
     $("#imageModal").css("display", "none");
 }
 
-// Close the modal if the user clicks outside of it
+
 $(window).on("click", function(event) {
     if (event.target == document.getElementById("imageModal")) {
         closeModal();
     }
 });
 
-// Function to handle form submission
+
 function submitForm(userId) {
-    // Set the user ID in a hidden input field
+ 
     $("#user_id_input").val(userId);
     
-    // Submit the form
+
     $("#submit_form").submit();
 }
 </script>
 
-<!-- Hidden form for submitting data to book_status -->
+
 <form id="submit_form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input type="hidden" id="user_id_input" name="user_id" value="">
     <input type="hidden" name="book_title" value="">

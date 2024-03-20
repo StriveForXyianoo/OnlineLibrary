@@ -10,16 +10,7 @@
 
 <?php
 
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$database = "database_users";
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include '../Configure.php';
 
 // User ID (assuming 'juan' is identified by a specific idnum)
 $idnum = '1111';

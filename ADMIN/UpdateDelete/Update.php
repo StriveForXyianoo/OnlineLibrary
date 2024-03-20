@@ -1,15 +1,6 @@
 <!-----------------------------------------------------------------------------USE IN DISPLAYING INFORMATION FORM MAIN LIBRARY ------------------------------------------------->
 <?php
-$hostname = "localhost";
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users";
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include '../../Configure.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"]) && isset($_GET["section"])) {
     $bookId = $_GET["id"];
@@ -59,16 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"]) && isset($_GET["s
 
 <!-----------------------------------------------------------------------------USE IN UPDATING IN TABLES OF MAIN LIBRARY ------------------------------------------------->
 <?php
-$hostname = "localhost";
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users";
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve data from the form

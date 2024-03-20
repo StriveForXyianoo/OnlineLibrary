@@ -365,10 +365,11 @@ ul.navbar li.dashboard {
     font-family: 'Open Sans', sans-serif;
     font-size: 10px;
     font-weight: 500;
+    border: none;
   }
 
-  .closebtn :hover{
-    background-color: #a76224;
+  .closebtn:hover{
+    background-color: #bf5900;
   }
   
 
@@ -382,6 +383,9 @@ ul.navbar li.dashboard {
     top: 5px;
     transform: translate(-50%,-50%);
     left: 50%;
+    cursor: default;
+    font-weight: 700;
+    
 }
 
 p{
@@ -716,8 +720,9 @@ mark {
 }
 
 .form-group p{
+    margin-top: -10px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     text-align: justify;
     
 }

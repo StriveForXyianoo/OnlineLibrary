@@ -16,16 +16,7 @@ if (isset($_POST['logout'])) {
 
 if (isset($_SESSION['idnum'])) {
    
-    $host = "localhost"; 
-    $username = "root"; 
-    $password = "witlibrary2023password"; 
-    $database = "database_users"; 
-
-    $conn = new mysqli($host, $username, $password, $database);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include 'Configure.php';
 
    
     $query = "SELECT lname, fname, addr, email, users_balance, users_lost, users_penalty, users_onhand, course, users_num, suffix FROM users_db WHERE idnum = ?";
@@ -104,26 +95,24 @@ $suffix = $_SESSION['suffix'];
         <div class="blur-box">
             <div class="content">
         
+        <h2>Clearances</h2>
 
+        <br>
+
+        <p>1.Only students without liabilities will be given clearance.</p>
+
+        <br>
+        <p>2.Library Borrower's Card should be surrenderd; otherwise, Student's copy of the Registered Form(RF) should be presented. If both are lost, the student must see the Librarian personally.</p>
+
+        <br>
+
+        <p>3.Only clearance for the Final examination will be signed by the Librarian assigned to each library.</p>
        
+        <br>
 
-        <div class="header">
-            <h1>CLEARANCES</h1>
-           </div>
+        <p>4.The general clearance shall be signed by the Chief Librarian and on the reverse side by the librarian of the said library.</p>
 
-          <div class="list">
-            <div class="list1">1.Only students without liabilities will be given clearance.</div>
-           
-            <div class="list2">2.Library Borrower's Card should be surrenderd; otherwise,
-                <br>Student's copy of the Registered Form(RF) should be presented.<br>
-                If both are lost, the student must see the Librarian personally.</div>
-            
-            <div class="list3">3.Only clearance for the Final examination will be signed  by 
-                    the <br>Librarian assigned to each library.</div>
-                   
-            <div class="list4">4.The general clearance shall be signed by the Chief Librarian <br> and 
-                    on the reverse side by the librarian of the said library.</div>
-          </div>
+
 
        
 

@@ -1,17 +1,7 @@
 <?php
 
 session_start();
-
-$host = "localhost"; 
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; 
-$conn = new mysqli($host, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include 'Configure.php';
 
 if (isset($_POST['login'])) {
     $username = $_POST['idnum'];
@@ -199,7 +189,11 @@ $conn->close();
 
         <a href="SignIn.php" class="dnthave">Don’t have an account? Sign up</a>
 
-        <a href="ADMIN/AdminLog.php" class="dnthave1"><i class="fas fa-user-circle"></i></a>
+        <a href="ADMIN/AdminLog.php" class="dnthave1 admin-link">
+  <i class="fas fa-user-circle"></i>
+  ADMIN
+</a>
+
 
 
 

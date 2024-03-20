@@ -1,14 +1,5 @@
 <?php
-$hostname = "localhost";
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users";
-
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include '../../Configure.php';
 
 // Initialize variables to store book information
 $book = array();
@@ -60,16 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"]) && isset($_GET["s
 
 <?php
 // Database connection details
-$hostname = "localhost";
-$username = "root";
-$password = "witlibrary2023password";
-$database = "database_users"; // Replace with your actual database name
 
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve data from the form

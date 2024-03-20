@@ -85,13 +85,74 @@ header{
     transform: translate(-50%, -50%);
     top: 45%;
     width: 1000px;
-    height: 500px;
-    background-image: url('your-background-image.jpg');
+    height: 450px;
     background-size: cover;
     position: relative;
     color: #fff;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
 }
 
+.h3wit{
+    margin-top: -20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    cursor: default;
+    font-weight: 800;
+}
+
+.h2hours{
+    font-size: 30px;
+    margin-top: -15px;
+    letter-spacing: 5px;
+    color: #ff7700f3;
+    font-weight: 800;
+    cursor: default;
+}
+
+.h3monday{
+    margin-top: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: default;
+}
+.h3saturday{
+    margin-top: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: default;
+}
+
+.h1break{
+    margin:10px;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 7px;
+    cursor: default;
+}
+
+.h2loan{
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: default;
+}
+.container-borrow p{
+    font-weight: 500;
+    cursor: default;
+ 
+}
+
+.pmonday{
+    margin-top: 5px;
+}
 .blur-box {
     width: 100%;
     height: 100%;
@@ -160,11 +221,74 @@ header{
         transform: translate(-50%, -50%);
         top: 45%;
         width: 85%;
-        height: 500px;
+        height: 480px;
         background-image: url('');
         background-size: cover;
         position: relative;
     }
+
+    
+.h3wit{
+    margin-top: -20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    cursor: default;
+    font-weight: 800;
+    display: none;
+}
+
+.h2hours{
+    font-size: 20px;
+    margin-top: -25px;
+    letter-spacing: 2px;
+    color: #ff7700f3;
+    font-weight: 800;
+    cursor: default;
+}
+
+.h3monday{
+    margin-top: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: default;
+}
+.h3saturday{
+    margin-top: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: default;
+}
+
+.h1break{
+    margin:15px;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    cursor: default;
+}
+
+.h2loan{
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: default;
+}
+.container-borrow p{
+    font-weight: 500;
+    cursor: default;
+
+ 
+}
+
+.pmonday{
+    margin-top: 5px;
+}
     
     .blur-box {
         width: 100%;
@@ -225,9 +349,27 @@ header{
     top: 45%;
     width: 1000px;
     height: 450px;
-    background-image: url('your-background-image.jpg');
     background-size: cover;
     position: relative;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    line-height: 1.5;
+}
+
+.container-fine p{
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: 1px;
+    cursor: default;
+}
+
+.container-fine h2{
+    color: white;
+    font-size: 35px;
+    margin-top: -30px;
+    cursor: default;
 }
 
 .blur-box {
@@ -299,12 +441,29 @@ header{
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
-        top: 35%;
+        top: 40%;
         width: 70%;
-        height: 500px;
+        height: 450px;
         background-image: url('');
         background-size: cover;
         position: relative;
+        line-height: 1.5;
+        padding: 5px;
+    }
+
+    .container-fine p{
+        color: white;
+        font-size: 13px;
+        line-height: 1.5;
+        text-align: 1px;
+        cursor: default;
+    }
+    
+    .container-fine h2{
+        color: white;
+        font-size: 25px;
+        margin-top: -30px;
+        cursor: default;
     }
     
     .blur-box {
@@ -366,12 +525,27 @@ header{
     top: 45%;
     width: 1000px;
     height: 450px;
-    background-image: url('your-background-image.jpg');
     background-size: cover;
     position: relative;
     color: #fff;
     padding: 0;
     box-sizing: border-box; 
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    line-height: 1.5;
+}
+
+.container-lost h2{
+    font-size: 35px;
+    cursor: default;
+    margin-top: -20px;
+}
+
+.container-lost p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: default;
 }
 
 .blur-box {
@@ -449,8 +623,23 @@ header{
         background-size: cover;
         position: relative;
         padding: 10px;
+        text-align: center;
+        align-items: center;
     }
     
+    .container-lost h2{
+        font-size: 20px;
+        cursor: default;
+        margin-top: -10px;
+    }
+    
+    .container-lost p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        cursor: default;
+    }
+
+
     .blur-box {
         width: 100%;
         height: 100%;
@@ -488,6 +677,27 @@ header{
         letter-spacing: 1px;
         text-align: justify;
     }
+
+
+    .list {
+        justify-content: baseline;
+        letter-spacing: 1px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .list1, .list2, .list3, .list4 {
+        width: 500px; 
+        display: inline-block; 
+        color: #ffffff;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 35px;
+        margin-bottom: 10px; 
+        padding: 0; 
+        box-sizing: border-box; 
+        font-weight: lighter;
+    }
     
 }
 
@@ -523,7 +733,6 @@ header{
     top: 45%;
     width: 1000px;
     height: 500px;
-    background-image: url('your-background-image.jpg');
     background-size: cover;
     position: relative;
 }
@@ -871,3 +1080,14 @@ header{
 .logout-icon-button:hover {
     background-color: #c82333; /* Darker red on hover, adjust as needed */
 }
+
+
+/********FOR CLEARANCE********/
+
+
+
+
+
+
+/********FOR CLEARANCE********/
+

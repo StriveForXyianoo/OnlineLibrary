@@ -1,7 +1,7 @@
 <?php
 $hostname = "localhost"; 
 $username = "root"; 
-$password = "witlibrary2023password"; 
+$password = ""; 
 $database = "database_users"; 
 
 $conn = mysqli_connect($hostname, $username, $password, $database);
