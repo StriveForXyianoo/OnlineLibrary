@@ -30,15 +30,16 @@ if (isset($_GET["id"])) {
         $mail = new PHPMailer();
 
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // SMTP host
+        $mail->SMTPDebug = 2; 
+        $mail->Host = 'smtp.hostinger.com';; // SMTP host
+        $mail->Port = 587;
         $mail->SMTPAuth = true;
-        $mail->Username = 'calderon.janrasheedcit2011@gmail.com'; // SMTP username
-        $mail->Password = 'tfeyfpskdtvbtsvs'; // SMTP password
+        $mail->Username = 'westerninstituteoftechnology@witlibrary.online'; // SMTP username
+        $mail->Password = 'WITLIbrary2024@'; // SMTP password -tfeyfpskdtvbtsvs
         $mail->SMTPSecure = 'ssl'; // Use SSL or 'tls' for TLS encryption
-        $mail->Port = 465; // Set the appropriate port
 
         // Set email details
-        $mail->setFrom('librarysample2011@gmail.com', 'WIT LIBRARY ADMINISTRATION');
+        $mail->setFrom('westerninstituteoftechnology@witlibrary.online', 'WIT LIBRARY ADMINISTRATION');
         $mail->addAddress($userEmail, $userName);
         $mail->isHTML(true);
 

@@ -26,7 +26,7 @@
 </div>
 <div class="back-btn"><a href="Admin Main.php">Back to Admin Panel</a></div>
 <div class="background-main">
-    <img src="pics/WIT-LOGO.png" class="mainlogo" alt="">
+    <img src="Pics/WIT-LOGO.png" class="mainlogo" alt="">
 </div>
 
 <div class="left-side-box">
